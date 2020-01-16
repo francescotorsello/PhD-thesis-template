@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{tikz,amsmath, amssymb,bm,color}
+\usepackage[margin=0cm,nohead]{geometry}
+\usepackage[active,tightpage]{preview}
+\usetikzlibrary{shapes,arrows}
+% needed for BB
+\usetikzlibrary{calc}
+
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \draw [white] (0,0) rectangle (-17,24.2);
+
+  \node [anchor=north east, align=right,text width=140mm,inner sep=0] at (-1,22.5) {
+    \fontsize{12.5}{1em}\selectfont
+    Doctoral Thesis in Theoretical Physics};
+
+  \node [anchor=south east, align=right,text width=140mm,inner sep=0] at (-1,13) {
+    \fontsize{25}{1em}\selectfont
+    \textsf{\textbf{Title of the thesis}}\\[10mm]
+    \fontsize{16}{1em}\selectfont
+    Author};
+
+  \node [anchor=south east, align=right,text width=140mm,inner sep=0] at (-1,2.1) {
+    \fontsize{12.5}{1.3em}\selectfont
+    Oskar Klein Centre for\\
+    Cosmoparticle Physics\\[1mm]
+    and\\[1mm]
+    Cosmology, Particle Astrophysics\\
+    and Strings\\[2mm]
+    Department of Physics\\
+    Stockholm University\\
+    SE-106 91 Stockholm\\~
+    };
+	
+  \node [anchor=south west, inner sep=0] at (-15,19) {
+	\includegraphics[height=37mm]{SU-logo}};
+	
+\node [anchor=south west, inner sep=0] at (-16,1.2) {
+	\includegraphics[height=37mm]{OKClogo}};
+
+  \node [anchor=south east, align=right,text width=140mm,inner sep=0] at (-1,1.5) {
+    \fontsize{13}{1em}\selectfont
+    Stockholm, Sweden, 2020};
+
+\end{tikzpicture}
+\end{document}

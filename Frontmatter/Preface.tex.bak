@@ -1,0 +1,54 @@
+\chapter{Preface}
+\label{ch:pre}
+
+This doctoral thesis collects the scientific results obtained during my Ph.D. studies, from September 2015 to February 2020, at the Oskar Klein Centre, Department of Physics, Stockholm University, in the Cosmology, particle Astrophysics and Strings (CoPS) division. It is accompanied by the articles written during the same period, published or submitted to peer-reviewed scientific journals.
+
+The thesis is divided in three parts. The last part contains the included papers. \autoref{part:1} and \autoref{part:2} constitute the body of the thesis. Specifically, \autoref{part:1} includes the results obtained during the first two years of the Ph.D. studies, whereas \autoref{part:2} includes the results obtained in the last two years and a half of the Ph.D. studies. The reason for keeping the two parts separated is that the results obtained in the first and last part of the Ph.D. studies, even though they have a shared motivation, use different methods. The Introduction, the Conclusion of Part I and the Conclusion and outlook connect the two parts and explain why they have both a standalone and a combined importance, in addition to clarify what is the common motivation behind them and how the results tie together.
+
+The thesis is written assuming the reader to be another Ph.D. student who starts to work in the field. Since there are no books describing the theory of extended gravity I have been working on, in writing the thesis I wanted both to explain my work and to provide the necessary background needed to understand my work in the clearest and simplest possible way. Also, I collected what I think are the relevant references that explain in a clear way both the physics and the mathematics needed. I hope to have succeeded in this task, and I leave the final judgment to the reader. Lastly, the thesis is not only a comprehensive summary of the included papers, but it includes complements to them and some original results obtained during the writing of the thesis.%A part of the complements to the papers were included in the thesis since the referees' reviews of the papers showed that some topics, which were only briefly touched in the papers, needed a more in-depth treatment.
+
+%\newpage
+\section*{Contributions to the papers}
+
+\vspace{0.5cm}
+\begin{description}[align=left, labelindent=0cm]
+\setlength\itemsep{0.5cm}
+	\item[\PaperI.] I had the original idea for the paper while working on \PaperIII, and Paper IV created the occasion to develop it. All the authors contributed to the results. I guided the work and wrote most of the paper, with the help from the coauthors.
+	\item[\PaperII.] This paper was born while looking for example solutions for \PaperI. I contributed in analyzing the solution, in checking the results, in discussing the physical implications and in writing the final version of the manuscript.
+	\item[\PaperIII.] Edvard M\"ortsell and I initiated the project. Mikica Kocic and I performed the analytic and numerical studies. All the authors had many discussions about the physical implications of the results. I wrote the majority of the paper, with the help from the coauthors.
+	\item[\PaperIV.] The idea for the paper was proposed by Mikica Kocic. I made the computations included in Appendix E and checked part of the computations included in the main text. I contributed to writing the final version of the paper in all of its parts. All the authors discussed extensively about the meaning of the concepts introduced in the paper.
+	\item[\PaperV.] The original ides for the work resulting in this paper was proposed by Mikica Kocic. I performed all the computations included in the paper and its appendix and wrote the majority of the paper. All the authors had several discussions about the meaning and physical implications of the results.
+	\item[\PaperVI.] The original idea was proposed in \cite{HassanKocic2018}. I made all the computations and wrote the entire paper. I had many discussions with Marcus Högås, Mikica Kocic, Anders Lundkvist and Edvard Mörtsell.
+	\item[\PaperVII.] I developed the software presented in this paper during the work on \PaperV and \PaperVI. I wrote the entirety of the code, with support from Mikica Kocic. I wrote the entire paper, with the help from Edvard Mörtsell and Mikica Kocic.
+	\item[\PaperVIII.] I reproduced the numerical solutions and checked the final results, and contributed to the writing of the final version of the paper. All the authors had several discussions about both the numerical issues and the physical implications of the numerical solutions.
+	%\item[Paper IV.] The work started after Marcus H\"og\aa s proved the proposition for a specific case, inspired by the reading of \PaperIII. I contributed in checking the results, in discussing their physical significance and in writing the last version of the article.
+\end{description}
+
+\section*{Material from the Licentiate thesis}
+
+The entirety of Part I of this thesis is based on my Licentiate thesis, \qm{Symmetries and black holes in Hassan--Rosen bimetric theory,} 2018 (unpublished). All chapters and sections of the Licentiate thesis were slightly modified, improved and harmonized with \autoref{part:2} during the work leading to the final form of this thesis.
+
+\section*{Acknowledgements}
+
+First and foremost, I would like to express my gratitude to my supervisor Edvard Mörtsell, for being always willing to discuss and answer my questions each time I knock on the door of his office. I cannot think of a more encouraging, positive and inspiring supervisor. I am also grateful to Fawad Hassan, my assistant supervisor, whose answers to my questions guided me many times towards the right direction.
+
+I am pleased to thank my collaborators Marcus Högås, Mikica Kocic and Anders Lundkvist. As I like to say, we are all meticulous in different ways, and this makes us enlighten each other very profitably. All our work together and our (sometimes endless) discussions have been invaluable.
+
+%Also, my gratitude goes to Mikica, Marcus and Sebastian Baum for reading the thesis and providing valuable comments and remarks.
+
+I am thankful to the Oskar Klein Centre and the CoPS division. Their dynamical and inspirational atmosphere made me enjoy the years of my Ph.D. in the best way. In particular, during these years the interaction with many people was beneficial to me. Many thanks go to Rahman Amanullah, Luis Apolo, Sebastian Baum, Ingemar Bengtsson, Lars Bergström, Jonas Enander, Julius Engelsöy, Ariel Goobar, %Adam Johansson Andrews, 
+Jorge Laraña Aragon, David Marsch, Kjell Rosquist, Angnis Schmidt-May, Christian Setzer, Stefan Sjörs, Mikael von Strauss, Bo Sundborg, Axel Widmark and Nico Wintergerst for all the pleasant and profitable discussions we had.
+
+I thank my office mates Marcus Högås, Mikica Kocic and Anders Lundkvist for making the \qm{bimetric office} a great place to spend the day. I thank them and my former office mates Sebastian Baum, Adri Duivenvoorden, Julius Engelsöy, Daniel Palm and Sunny Vagnozzi for always knowing when to start a new intriguing (or funny, or both) conversation. 
+
+In addition, I thank my mentor Stefano Bonetti, for being always supportive and for sharing with me his wisdom about the academic life and career.
+
+I am thankful to Viktoria Larsson, the coach of AlbaNova Gym. She taught me how to increase all my personal best results in amateur powerlifting. I will miss both her professional coaching and the gym environment that my gym mates Björn Ahlgren, Egor Babaev, Matthias Blennow, Emil Blomqvist, Julius Engelsöy, Raphael Kalender, Anders Källberg, Mats Larsson, Per Moosavi, Patrick Mutter, Frida Navratil, Petros Papadogiannis, Marcus Pernow, Jonas Persson, Dmitry Romashchenko, Num Vistbacka and Axel Widmark contributed to create and maintain during these years. I hope I will be able to join other AlbaNova Gym competitions as an external athlete.
+
+Infine ringrazio Sonia, la mia compagna di vita da oltre dieci anni, con cui ho condiviso momenti bellissimi e superato momenti difficili. Ringrazio la mia famiglia, da sempre inesauribile fonte di fiducia e supporto, e i miei amici Andrea, Emanuele, Gigi, Marcello, Marco, Matteo e Piergiorgio, che da più di quindici anni mi aiutano a definire chi sono e mi ricordano da dove vengo.
+
+\vspace{0.5cm}
+\begin{flushright}
+ Francesco Torsello \\
+ Stockholm, December 2019
+\end{flushright}

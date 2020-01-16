@@ -1,0 +1,43 @@
+\tocless\chapter{List of accompanying papers}
+\label{ch:papers}
+
+\vspace{-5pt} % Increase to have a larger space. 
+
+\noindent The following papers are included in this thesis, and are referred to by the Roman numbers assigned below.
+
+\vspace{0.5cm} % Increase to have a larger space before the list is started. 
+
+\begin{description}[align=left, labelwidth=0.75cm ,labelindent=0cm]
+\setlength\itemsep{0.5cm}
+ \item [I]  		\hyperref[PaperI]{\fullcite{PhysRevD.97.084022}}\mybibexclude{PhysRevD.97.084022}
+ \item [II] 		\hyperref[PaperII]{\fullcite{Kocic:2017hve}}\mybibexclude{Kocic:2017hve}. Submitted to \emph{Phys. Rev. D}, under peer-review.
+ \item [III]		\hyperref[PaperIII]{\fullcite{PhysRevD.96.064003}}\mybibexclude{PhysRevD.96.064003}
+ \item [IV]		\hyperref[PaperIV]{\fullcite{Kocic_2019}}\mybibexclude{Kocic_2019}
+ \item [V]		\hyperref[PaperV]{\fullcite{Torsello:2019tgc}}\mybibexclude{Torsello:2019tgc}
+ \item [VI]		\hyperref[PaperVI]{\fullcite{Torsello_2019}}\mybibexclude{Torsello_2019}
+ \item [VII]		\hyperref[PaperVII]{\fullcite{TORSELLO2020106948}}\mybibexclude{TORSELLO2020106948}
+ \item [VIII]	\hyperref[PaperVIII]{\fullcite{Kocic:2019gxl}}\mybibexclude{Kocic:2019gxl}. Submitted to \emph{Classical and Quantum Gravity}, under peer-review.
+\end{description}
+
+\vspace{0.5cm}
+\noindent
+The following papers are not included in the thesis, and are cited as ordinary references in the main text.
+\vspace{0.5cm}
+
+\begin{description}[align=left, labelwidth=0.75cm ,labelindent=0cm]
+\setlength\itemsep{0.5cm}
+ \item \fullcite{doi:10.1063/1.5100027}
+ \item \fullcite{Hogas:2019cpg}
+ \item \fullcite{Hogas:2019ywm}
+\end{description}
+\vspace{0.5cm}
+\noindent
+The chronological order of the papers is: \textbf{III, II, I, IV, V, VI, VII, VIII}.
+
+\noindent
+\rule{\linewidth}{0.5mm}
+
+\vspace{2mm}
+
+\noindent
+Reprints were made with permission from the publishers.

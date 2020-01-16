@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\ifShowLayout
+\newif\ifSpaper
+
+\makeatletter
+
+\newlength{\TopOffset}
+\newlength{\ThumbBoxH}
+\newlength{\ThumbBoxW}
+\newlength{\ThumbBoxX}
+\newlength{\ThumbBoxLargeX}
+\newlength{\ThumbBoxY}
+\newlength{\OuterMargin}
+
+\newcommand{\ThumbBoxColor}{black}
+
+\setlength{\TopOffset}{25.4mm+\hoffset+\topmargin+\headheight+\headsep}
+\setlength{\ThumbBoxH}{23mm}
+\setlength{\ThumbBoxW}{70mm}
+\setlength{\ThumbBoxX}{10mm}
+
+\ifSpaper
+   \setlength{\ThumbBoxLargeX}{30mm}
+\else
+   \setlength{\ThumbBoxLargeX}{24mm}
+\fi
+
+\setlength{\ThumbBoxY}{\TopOffset-\ThumbBoxH/2}
+
+\setlength{\OuterMargin}{25.4mm+\hoffset+\evensidemargin}
+
+\newcommand{\ThumbBox}[2]{%
+  \begin{tikzpicture}[x=1mm, y=1mm, remember picture, overlay]
+      \checkoddpage\ifoddpage
+        \node [anchor=north,rotate=90,draw,rectangle, very thin, rounded corners=5pt,
+          color=\ThumbBoxColor,fill=\ThumbBoxColor,minimum width=\ThumbBoxH,minimum height=\ThumbBoxW] 
+          at ($(current page.north east) - (\ThumbBoxX,\ThumbBoxY+\value{chapter}*\ThumbBoxH+#2*\ThumbBoxH)$) 
+          {};
+        \node [anchor=north,rotate=90,text width=\ThumbBoxH,align=flush center,font=\sffamily] 
+          at ($(current page.north east) - (\ThumbBoxX-1,\ThumbBoxY+\value{chapter}*\ThumbBoxH+#2*\ThumbBoxH)$) 
+          {\color{white}\textbf{#1}};
+      \else
+        \node [anchor=south,rotate=90,draw,rectangle, very thin, rounded corners=5pt,
+          color=\ThumbBoxColor,fill=\ThumbBoxColor,minimum width=\ThumbBoxH,minimum height=\ThumbBoxW] 
+          at ($(current page.north west) - (-\ThumbBoxX,\ThumbBoxY+\value{chapter}*\ThumbBoxH+#2*\ThumbBoxH)$) 
+          {};
+        \node [anchor=south,rotate=90,text width=\ThumbBoxH,align=flush center,font=\sffamily] 
+          at ($(current page.north west) - (-\ThumbBoxX+1,\ThumbBoxY+\value{chapter}*\ThumbBoxH+#2*\ThumbBoxH)$) 
+          {\color{white}\textbf{#1}};
+      \fi
+  \end{tikzpicture}
+}
+
+\newcommand{\ThumbBoxLarge}[2]{%
+  \checkoddpage\ifoddpage
+    \begin{tikzpicture}[x=1mm, y=1mm, remember picture, overlay]
+      \node [anchor = west,
+        draw, rectangle, very thin, rounded corners=5pt, inner sep = 5,
+        fill = \ThumbBoxColor, color = \ThumbBoxColor,
+        minimum height = \ThumbBoxH, minimum width = \ThumbBoxW, text width = \ThumbBoxW,
+        align = flush left, font = \sffamily] 
+        at ($(current page.north east) - (\OuterMargin+\ThumbBoxLargeX,\ThumbBoxY+\value{chapter}*\ThumbBoxH+#2*\ThumbBoxH)$)
+        {\color{white}\fontsize{23pt}{0em}\selectfont\textbf{~~#1}};
+    \end{tikzpicture}
+  \fi
+}
+
+\newcommand{\labelPaper}[1]{%
+   \let\orglabel\label
+   \let\label\@gobble
+   \edef\@currentlabel{#1\unskip}%
+   \let\label\orglabel
+}
+
+\newcommand{\overlayPaperInfo}[1]{%
+  \begin{tikzpicture}[x=1mm, y=1mm, remember picture, overlay]
+    \node [anchor=south east,align=flush left,text width=\textwidth, inner sep = 0] 
+      at ($(current page.north east) - (\OuterMargin,\TopOffset+\textheight)$) {#1};
+  \end{tikzpicture}
+}
+
+\newcounter{PaperSubFolio}
+\newcommand{\PaperSubFolioFontSize}{12}
+
+\ifShowLayout
+  \tikzset{folioFill/.style={red!10}}
+\else
+  \tikzset{folioFill/.style={white,fill=white}}
+\fi
+
+\newcommand{\overlayPaperFolio}[3]{%
+  \begin{tikzpicture}[x=1mm, y=1mm, remember picture, overlay]
+      \checkoddpage\ifoddpage
+        \node [anchor=south,draw,rectangle,folioFill] 
+          at ($(current page.south) + (#2,#3)$)
+          {\fontsize{\PaperSubFolioFontSize}{0}\selectfont\color{black}
+          \textsc{Paper \PaperID}~--~\thePaperSubFolio~\color{black!40}(\thepage)};
+      \else
+        \node [anchor=south,draw,rectangle,folioFill] 
+          at ($(current page.south) + (-#2,#3)$)
+          {\fontsize{\PaperSubFolioFontSize}{0}\selectfont\color{black}
+          \textsc{Paper \PaperID}~--~\thePaperSubFolio~\color{black!40}(\thepage)};
+      \fi
+  \end{tikzpicture}
+  \stepcounter{PaperSubFolio}
+}
+
+\makeatother
+
+\newcommand{\includePDF}[2]{
+     \pagestyle{empty}
+     \includepdf[pages={-},offset=5mm 0mm,
+       pagecommand={
+         \noindent\ThumbBox{Paper~#2}{0}
+       }]{#1}
+     \cleardoublepage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

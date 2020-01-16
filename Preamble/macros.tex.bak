@@ -1,0 +1,691 @@
+\usepackage{mathabx}
+\usepackage{accents}
+\usepackage{xspace}
+
+\DeclareMathAlphabet\urwscr{U}{urwchancal}{m}{n}%
+
+%\usepackage{calligra}
+%\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+%\usepackage[T1]{fontenc}
+%\usepackage[backslant]{aurical}
+%\DeclareMathAlphabet{\mathcalligra}{T1}{aurical}{m}{n}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifx \ii \undefined  % Avoid the redefinitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareMathAlphabet{\mathsfit}{\encodingdefault}{\sfdefault}{m}{sl}
+\SetMathAlphabet{\mathsfit}{bold}{\encodingdefault}{\sfdefault}{bx}{sl}
+
+\DeclareMathAlphabet{\mathesstixfrak}{U}{esstixfrak}{m}{n}
+
+% Euler letters
+
+\DeclareSymbolFont{eulerletters}{U}{eus}{m}{n}
+\DeclareMathSymbol{\eulU}{\mathord}{eulerletters}{`U}
+\DeclareMathSymbol{\eulC}{\mathord}{eulerletters}{`C}
+\DeclareMathSymbol{\eulB}{\mathord}{eulerletters}{`B}
+\DeclareMathSymbol{\eulQ}{\mathord}{eulerletters}{`Q}
+\DeclareMathSymbol{\eulE}{\mathord}{eulerletters}{`E}
+\DeclareMathSymbol{\eulD}{\mathord}{eulerletters}{`D}
+\DeclareMathSymbol{\eulV}{\mathord}{eulerletters}{`V}
+\DeclareMathSymbol{\eulW}{\mathord}{eulerletters}{`W}
+\DeclareMathSymbol{\eulS}{\mathord}{eulerletters}{`S}
+\DeclareMathSymbol{\eulG}{\mathord}{eulerletters}{`G}
+\DeclareMathSymbol{\eulL}{\mathord}{eulerletters}{`L}
+\DeclareMathSymbol{\eulK}{\mathord}{eulerletters}{`K}
+\DeclareMathSymbol{\eulR}{\mathord}{eulerletters}{`R}
+\DeclareMathSymbol{\eulN}{\mathord}{eulerletters}{`N}
+\DeclareMathSymbol{\eulT}{\mathord}{eulerletters}{`T}
+\DeclareMathSymbol{\eulO}{\mathord}{eulerletters}{`O}
+\DeclareMathSymbol{\eulX}{\mathord}{eulerletters}{`X}
+
+%\DeclareSymbolFont{CMB}{OML}{cmbrm}{m}{it}
+\DeclareSymbolFont{CMB}{OMS}{cmsy}{m}{it}
+\DeclareMathSymbol{\cmA}{\mathord}{CMB}{`A}
+\DeclareMathSymbol{\cmB}{\mathord}{CMB}{`B}
+\DeclareMathSymbol{\cmW}{\mathord}{CMB}{`W}
+
+% Adjusted color flavors
+
+\definecolor{red}{rgb}{1,0,0.1}
+\definecolor{green}{rgb}{0.0,0.6,0}
+\definecolor{blue}{rgb}{0.1,0.1,1}
+\definecolor{orange}{rgb}{0.6,0.3,0}
+\definecolor{magenta}{rgb}{0.9,0.1,1}
+
+\newcommand{\qm}[1]{``#1"}
+\newcommand{\vect}[1]{\operatorname{vec}\qb{#1}}
+
+\newcommand\nPlusOne{$\sdim\hspace{-0.1em}+\hspace{-0.1em}1$\xspace}
+\newcommand\itnPlusOne{\textit{N+1}\xspace}
+\newcommand\threePlusOne{$3\hspace{-0.075em}+\hspace{-0.1em}1$\xspace}
+\newcommand\itThreePlusOne{\textit{3+1}\xspace}
+\newcommand\boldThreePlusOne{$\boldsymbol{3\hspace{-0.075em}+\hspace{-0.1em}1}$\xspace}
+\newcommand\twoPlusTwo{$2\hspace{-0.075em}+\hspace{-0.1em}2$\xspace}
+\newcommand\onePlusLog{1+$\hspace{0.1em}\log$\xspace}
+
+\newcommand\thcoo{\mbox{\straighttheta}\xspace}
+\newcommand\phcoo{\mbox{\straightphi}\xspace}
+\newcommand\lamb{\mbox{\textlambda}\xspace}
+\newcommand\psiconf{\mbox{\textit{\textpsi}}}
+\newcommand\psiconfg{\gSector{\mbox{\textit{\textpsi}}_\gamma}}
+\newcommand\psiconff{\fSector{\mbox{\textit{\textpsi}}_\varphi}}
+
+\newcommand\dv{\mathcal{D}\xspace}
+\newcommand\ddv{\hat{\mathcal{D}}\xspace}
+
+\newcommand\mfld{\mathscr{M}\xspace}
+
+\newcommand\transpose[1]{{#1}^\mathsmaller{\mathsf{T}}}
+
+\renewcommand\tilde[1]{\mkern1mu\widetilde{\mkern-1mu#1}}
+
+\global\long\def\dt{\partial_{t}}
+\global\long\def\dtp{\partial_{t} \sLp}
+\global\newcommand\pd[2]{\dfrac{\partial #1}{\partial #2}}
+\global\newcommand\mixpd[3]{\dfrac{\partial^2 #1}{\partial #2 \partial #3}}
+
+\global\long\def\biggcb#1{\biggl\lbrace #1\biggr\rbrace}
+\global\long\def\Biggcb#1{\Biggl\lbrace #1\Biggr\rbrace}
+\global\long\def\bigcb#1{\bigl\lbrace#1\bigr\rbrace}
+\global\long\def\Bigcb#1{\Bigl\lbrace#1\Bigr\rbrace}
+\global\long\def\bigqb#1{\bigl[#1\bigr]}
+\global\long\def\Bigqb#1{\Bigl[#1\Bigr]}
+\global\long\def\biggqb#1{\biggl[#1\biggr]}
+\global\long\def\Biggqb#1{\Biggl[#1\Biggr]}
+\global\long\def\bigrb#1{\bigl(#1\bigr)}
+\global\long\def\Bigrb#1{\Bigl(#1\Bigr)}
+\global\long\def\biggrb#1{\biggl(#1\biggr)}
+\global\long\def\rb#1{\left(#1\right)}
+ \global\long\def\qb#1{\left[#1\right]}
+ \global\long\def\cb#1{\left\lbrace #1 \right\rbrace }
+ \global\long\def\qm#1{``#1''}
+ 
+ \global\long\def\brb#1{\Bigl(#1\Bigr)}
+ \global\long\def\bqb#1{\Bigl[#1\Bigr]}
+ \global\long\def\bcb#1{\Bigl\lbrace #1\Bigr\rbrace}
+
+\global\long\def\vect#1{\operatorname{vec}\qb{#1}}
+
+\global\long\def\gblab{\gSector{\mathrm{b}}}
+\global\long\def\gmlab{\gSector{\mathrm{m}}}
+\global\long\def\fblab{\fSector{\mathrm{b}}}
+\global\long\def\fmlab{\fSector{\mathrm{m}}}
+
+\newcommand\bSe{\begin{subequations}}
+\newcommand\eSe{\end{subequations}}
+
+\newcommand\mat[1]{
+\begin{pmatrix}
+#1
+\end{pmatrix}
+}
+
+\newcommand\matc[1]{
+  \bgroup\renewcommand{\arraystretch}{0.9}\begin{pmatrix}
+	#1
+  \end{pmatrix}\egroup
+}
+
+\newenvironment{pmatrixc}{
+  \bgroup\renewcommand{\arraystretch}{1}\begin{pmatrix}
+}{
+  \end{pmatrix}\egroup
+}
+
+\newcommand\diagmat[1]{\operatorname{diag}\qb{#1}}
+
+\usepackage{xparse}
+\ExplSyntaxOn
+\NewDocumentCommand{\mref}{m}{\quinn_mref:n {#1}}
+\seq_new:N \l_quinn_mref_seq
+\cs_new:Npn \quinn_mref:n #1
+ {
+  \seq_set_split:Nnn \l_quinn_mref_seq { , } { #1 }
+  \seq_pop_right:NN \l_quinn_mref_seq \l_tmpa_tl
+  ( % print the left parenthesis
+  \seq_map_inline:Nn \l_quinn_mref_seq
+    { \ref{##1},\nobreakspace } % print the first references
+  \exp_args:NV \ref \l_tmpa_tl % print the last or only one
+  ) % print the right parenthesis
+ }
+\ExplSyntaxOff
+
+\newcommand\ii{\mathrm{i}}
+\newcommand\ee{\mathrm{e}}
+\newcommand\dd{\mathrm{d}}
+\newcommand\ppi{\mathrm{\pi}}
+\newcommand\tr{\mathtt{{\scriptscriptstyle \top}}}
+\newcommand\Tr{\operatorname{Tr}}
+\newcommand\op[1]{\operatorname{#1}}
+\newcommand\diag{\operatorname{diag}}
+\newcommand\Lie{\mathrm{\mathscr{L}}}
+\newcommand\dr{\partial _r}
+\newcommand\drr{\partial _{rr}}
+% \newcommand\dim{\operatorname{dim}}
+\newcommand\mD{\mathscr{D}}
+
+\newcommand\mfrac[2]{\frac{\raisebox{-0.45ex}{\scalebox{0.9}{#1}}}{\raisebox{0.4ex}{\scalebox{0.9}{#2}}}}
+\newcommand\mbinom[2]{\Big(\begin{array}{c}
+ #1\\[-0.75ex]
+ #2 
+\end{array}\Big)}
+
+\newcommand\QED{\mbox{{\color{red}\qedhere}}}
+
+\newcommand\tudu[4]{{\mbox{\ensuremath{#1}}}^{#2}{}_{#3}{}^{#4}}
+\newcommand\tdud[4]{{\mbox{\ensuremath{#1}}}{}_{#2}{}^{#3}{}_{#4}}
+\newcommand\tud[3]{{\mbox{\ensuremath{#1}}}^{#2}{}_{#3}}
+\newcommand\tdu[3]{{\mbox{\ensuremath{#1}}}{}_{#2}{}^{#3}}
+
+\newcommand\repEq[2]{\repEqq{#1}{#2}}
+
+\newcommand\Aeq[1]{\tag*{(#1)}}
+\newcommand\PSeq[1]{\tag*{\llap{P\,}(#1)}}
+\newcommand\BJeq[1]{\tag*{\llap{B\,}(#1)}}
+
+\newcommand\ixA{a}
+\newcommand\ixB{b}
+\newcommand\ccVar{\mathcal{C}}
+
+\newcommand\lidx[1]{\ ^{(#1)}\!}
+
+\newcommand\stdim{d}
+\newcommand\sdim{N}
+
+\ifColors
+  \newcommand\gSector[1]{{\color{blue}#1}}
+  \newcommand\fSector[1]{{\color{red}#1}}
+  \newcommand\hSector[1]{{\color{green}#1}}
+  \newcommand\lSector[1]{{\color{BurntOrange}#1}}
+  \newcommand\mSector[1]{{\color{magenta}#1}}
+  \newcommand\hrColor[1]{#1}
+  \newcommand\VColor[1]{{\color{magenta}#1}}
+  \newcommand\KColor[1]{{\color{teal}#1}}
+  \newcommand\KVColor[1]{{\color{purple}#1}}
+  \newcommand\qvf{{\color{orange}\xi}}
+  %\newcommand\betaSum{{\color{orange}m^{d}{\textstyle \sum_{n}}\beta_{n}}}
+  %\newcommand\betaSum{\,{\color{orange}m^{\stdim}{\sum_{n=0}^\stdim}\beta_{n}}}
+  \newcommand\betaSum{\,{\color{orange}\ell^{-\nicefrac{\stdim}{2}}{\sum_{n=0}^\stdim}\beta_{n}}}
+  %\newcommand\betaSumL{{\color{orange}\ell^{\nicefrac{-\stdim}{2}}}{\textstyle {\displaystyle \sum_{n}}}\beta_{n}}}
+\else
+  \newcommand\gSector[1]{{\color{black}#1}}
+  \newcommand\fSector[1]{{\color{black}#1}}
+  \newcommand\hSector[1]{{\color{black}#1}}
+  \newcommand\lSector[1]{{\color{black}#1}}
+  \newcommand\mSector[1]{{\color{black}#1}}
+  \newcommand\hrColor[1]{{\color{black}#1}}
+  \newcommand\VColor[1]{{\color{black}#1}}
+  \newcommand\KColor[1]{{\color{black}#1}}
+  \newcommand\KVColor[1]{{\color{black}#1}}
+  \newcommand\qvf{\xi}
+  \newcommand\betaSum{\,{m^{\stdim}{\sum_{n=0}^\stdim}\beta_{n}}}
+  \newcommand\betaSumL{m^{\stdim}{\displaystyle \sum_{n}}\beta_{n}}
+\fi
+
+%--------------------Lorentz indices--------------------%
+
+\newcommand\LA{\textbf{A}}
+\newcommand\LB{\textbf{B}}
+\newcommand\LC{\textbf{C}}
+\newcommand\LD{\textbf{D}}
+\newcommand\LE{\textbf{E}}
+\newcommand\LF{\textbf{F}}
+\newcommand\LG{\textbf{G}}
+\newcommand\LH{\textbf{H}}
+\newcommand\LI{\textbf{I}}
+\newcommand\LL{\textbf{L}}
+
+\newcommand\La{\textbf{a}}
+\newcommand\Lb{\textbf{b}}
+\newcommand\Lc{\textbf{c}}
+\newcommand\Ld{\textbf{d}}
+\newcommand\Le{\textbf{e}}
+\newcommand\Lf{\textbf{f}}
+\newcommand\Lg{\textbf{g}}
+\newcommand\Lh{\textbf{h}}
+\newcommand\Li{\textbf{i}}
+\newcommand\Ll{\textbf{l}}
+
+%--------------------Original Macros--------------------%
+
+\newcommand\hashsize{4.25pt}
+
+%\newcommand\nubirel{{\fontfamily{qag}\selectfont \color{blue}nu\color{green}bir\color{red}el\color{black}}}
+\newcommand\nubirel{{\fontfamily{qag}\selectfont \gSector{nu}\hSector{bi}\fSector{rel}}\xspace}
+
+\newcommand\gcauchy{\gSector{\theta_g}}
+\newcommand\fcauchy{\fSector{\theta_f}}
+\newcommand\hcauchy{\hSector{\theta_h}}
+
+\newcommand\gEm{\gSector{\mathcal{E}_g}}
+\newcommand\fEm{\fSector{\mathcal{E}_f}}
+\newcommand\hEm{\hSector{\mathcal{E}_h}}
+
+\newcommand\spincon{\scaleto{\eulW}{5.5pt}}
+\newcommand\gspincon{\gSector{\scaleto{\eulW}{5.5pt}_g}}
+\newcommand\fspincon{\fSector{\scaleto{\protect\tilde{\eulW}}{5.5pt}_f}}
+\newcommand\gcauchycon{\gSector{\omega_g}}
+\newcommand\fcauchycon{\fSector{\omega_f}}
+
+\newcommand\gMet{\gSector g}
+\newcommand\gSp{\gSector{\gamma}}
+\newcommand\gLapse{\gSector{\alpha}}
+\newcommand\gShift{\gSector \beta}
+\newcommand\gShiftVec{\gSector{\vec{N}}}
+\newcommand\gK{\gSector K}
+\newcommand\gE{\gSector e}
+\newcommand\gFE{\gSector E}
+\newcommand\gD{\gSector{D}}
+\newcommand\gR{\gSector R}
+\newcommand\gCS{\gSector{\Gamma}}
+\newcommand\bimV{\mSector{V}}
+\newcommand\gLmat{\gSector{\mathcal{L}_{g}}}
+\newcommand\fLmat{\fSector{\mathcal{L}_{f}}}
+\newcommand\gVse{\gSector{V_{g}}}
+\newcommand\gTse{\gSector{T_{g}}}
+\newcommand\gTeff{\gSector{T_{g}^\mathrm{eff}}}
+\newcommand\gEinst{\gSector{G_{g}}}
+\newcommand\gRicci{\gSector{R_{g}}}
+\newcommand\gCC{\gSector{\eulC}}
+\newcommand\gCE{\gSector{\eulE}}
+\newcommand\gCD{\gSector{\nabla}}
+
+\newcommand\hE{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{\iota}}}
+\newcommand\hCD{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{\nabla}}}
+
+\newcommand\scalt{\eulT}
+\newcommand\tvec{\overrightarrow{\nabla \scalt}}%\mathtt{t}
+\newcommand\gtvec{\gSector{\mathtt{t}}}
+\newcommand\ftvec{\fSector{\protect\tilde{\mathtt{t}}}}
+\newcommand\htvec{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{{\mathtt{t}}}}}
+\newcommand\nor{\mbox{\textnu}}
+\newcommand\gnor{\gSector{\mbox{\textnu}}}
+\newcommand\fnor{\fSector{\protect\tilde{\mbox{\textnu}}}}
+\newcommand\hnor{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{\mbox{\textnu}}}}
+\newcommand\gnorev{\gSector{\mbox{\textit{\textmu}}}}
+\newcommand\fnorev{\fSector{\protect\tilde{\mbox{\textit{\textmu}}}}}
+\newcommand\hnorev{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{\mbox{\textit{\textmu}}}}}
+
+\newcommand\gtau{\gSector{\tau}}
+\newcommand\ftau{\fSector{\protect\tilde{\tau}}}
+\newcommand\htau{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{\tau}}}
+
+\newcommand\gp{\gSector{p'}}
+\newcommand\fp{\fSector{\protect\tilde{p}}}
+\newcommand\hp{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{p}}}
+
+\newcommand\gLow{\gSector{L}}
+\newcommand\fLow{\fSector{\protect\tilde{L}}}
+\newcommand\hLow{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{L}}}
+
+\newcommand\gDiag{\gSector{D}}
+\newcommand\fDiag{\fSector{\protect\tilde{D}}}
+\newcommand\hDiag{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{D}}}
+
+\newcommand\gDiagSq{\gSector{C}}
+\newcommand\fDiagSq{\fSector{\protect\tilde{C}}}
+\newcommand\hDiagSq{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{C}}}
+
+\newcommand\gPE{\gSector{\Pi}}
+\newcommand\fPEo{\fSector{\protect\tilde{\Pi}_\mathtt{o}}}
+\newcommand\fPE{\fSector{\protect\tilde{\Pi}}}
+\newcommand\hPE{\hSector{\protect\accentset{\protect\scaleto{\#}{\hashsize}}{\Pi}}}
+\newcommand\PLT{\lSector{\boldsymbol{\mathrm{\Omega}}}}
+
+\newcommand\fMet{\fSector f}
+\newcommand\fSp{\fSector{\varphi}}
+\newcommand\fLapse{\fSector{\protect\tilde{\alpha}}}
+\newcommand\fShift{\fSector{\protect\tilde{\beta}}}
+\newcommand\fShiftVec{\fSector{\vec{M}}}
+\newcommand\fK{\fSector{\protect\tilde{K}}}
+\newcommand\fE{\fSector m}
+\newcommand\fEb{\fSector{m_\mathtt{1}}}
+\newcommand\fEtr{\fSector{m_\mathtt{o}}}
+\newcommand\fFE{\fSector M}
+\newcommand\fFEtr{\fSector{M_\mathtt{o}}}
+\newcommand\fD{\fSector{\protect\tilde{D}}}
+\newcommand\fR{\fSector{\protect\tilde{R}}}
+\newcommand\fCS{\fSector{\protect\tilde{\Gamma}}}
+\newcommand\fVse{\fSector{V_{f}}}
+\newcommand\fTse{\fSector{T_{f}}}
+\newcommand\fTeff{\fSector{T_{f}^\mathrm{eff}}}
+\newcommand\fEinst{\fSector{G_{f}}}
+\newcommand\fRicci{\fSector{R_{f}}}
+\newcommand\fCC{\fSector{\widetilde{\eulC}}}
+\newcommand\fCE{\fSector{\widetilde{\eulE}}}
+\newcommand\fCD{\fSector{\widetilde{\nabla}}}
+
+\newcommand\mSqrt{\mSector{S}}
+\newcommand\mS{\mSector{\eulC_\mathrm{b}}}
+\newcommand\mLC{\mSector{\eulC_\mathrm{lap}}}
+\newcommand\mSBS{\mSector{\eulC_\mathrm{b}}}
+\newcommand\mW{\mSector{W}}
+\newcommand\mWBS{\mSector{W}}
+\newcommand\mM{\mSector{\mathcal{M}}}
+\newcommand\mN{\mSector{\mathcal{N}}}
+\newcommand\mP{\mSector{\mathcal{P}}}
+\newcommand\mL{\mSector{\mathcal{S}}}
+\newcommand\hcsi{\hSector{\xi}}%\mathcal{h}
+\newcommand\hzeta{\hSector{\zeta}}
+
+\newcommand\gKappa{\gSector{\kappa_{g}}}
+\newcommand\gKappainv{\gSector{\kappa_{g}^{-1}}}
+\newcommand\Mg{\gSector{M_{g}^{2}}}
+\newcommand\gMpl{\gSector{M_{g}}}
+
+\newcommand\fKappa{\fSector{\kappa_{f}}}
+\newcommand\fKappainv{\fSector{\kappa_{f}^{-1}}}
+\newcommand\Mf{\fSector{M_{f}^{2}}}
+\newcommand\fMpl{\fSector{M_{f}}}
+
+\newcommand\grho{\gSector{\rho^\mathrm{m}}}
+\newcommand\gjota{\gSector{j^\mathrm{m}}}
+\newcommand\gJota{\gSector{J^\mathrm{m}}}
+
+\newcommand\frho{\fSector{\protect\tilde{\rho}^\mathrm{m}}}
+\newcommand\fjota{\fSector{\protect\tilde{j}^\mathrm{m}}}
+\newcommand\fJota{\fSector{\protect\tilde{J}^\mathrm{m}}}
+
+\newcommand\grhob{\gSector{\rho^\mathrm{b}}}
+\newcommand\gjotab{\gSector{j^\mathrm{b}}}
+\newcommand\gJotab{\gSector{J^\mathrm{b}}}
+
+\newcommand\frhob{\fSector{\protect\tilde{\rho}{}^\mathrm{b}}}
+\newcommand\fjotab{\fSector{\protect\tilde{j}{}^\mathrm{b}}}
+\newcommand\fJotab{\fSector{\protect\tilde{J}{}^\mathrm{b}}}
+
+\newcommand\grhoeff{\gSector{\rho^\mathrm{eff}}}
+\newcommand\gjotaeff{\gSector{j^\mathrm{eff}}}
+\newcommand\gJotaeff{\gSector{J^\mathrm{eff}}}
+
+\newcommand\frhoeff{\fSector{\protect\tilde{\rho}{}^\mathrm{eff}}}
+\newcommand\fjotaeff{\fSector{\protect\tilde{j}{}^\mathrm{eff}}}
+\newcommand\fJotaeff{\fSector{\protect\tilde{J}{}^\mathrm{eff}}}
+
+\newcommand\gAlpha{\gSector{\alpha}}
+\newcommand\gBeta{\gSector{\beta}}
+\newcommand\gEA{\gSector A}
+\newcommand\gEB{\gSector B}
+\newcommand\fAlpha{\fSector{\protect\tilde{\alpha}}}
+\newcommand\fBeta{\fSector{\protect\tilde{\beta}}}
+\newcommand\fEA{\fSector{\protect\tilde{A}}}
+\newcommand\fEB{\fSector{\protect\tilde{B}}}
+
+\newcommand\sEtau{\mSector{\tau}}
+\newcommand\sESigma{\mSector{\Sigma}}
+\newcommand\sER{\mSector R}
+
+\newcommand\Proj{\operatorname{\perp}}
+\newcommand\gProj{\gSector{\operatorname{\perp}}}
+\newcommand\fProj{\fSector{\protect\tilde{\operatorname{\perp}}}}
+\newcommand\hProj{\hSector{\operatorname{\protect\accentset{\scaleto{\#}{\hashsize}}{\perp}}}}
+\newcommand\prho{\boldsymbol{\rho}}
+\newcommand\pjota{\boldsymbol{j}}
+\newcommand\pJota{\boldsymbol{J}}
+
+\newcommand\sgn{\gSector{n}}%\mathsfit{n}{\mkern1mu}}}
+\newcommand\sgD{\gSector{\eulD}}
+\newcommand\sgQ{\gSector{\eulQ}}
+\newcommand\sgV{\gSector{\eulV}}
+\newcommand\sgU{\gSector{\eulU}}
+\newcommand\sgB{\gSector{\eulB}}
+
+\newcommand\sfn{\fSector{\widetilde{n}}}%\tilde{\mathsfit{n}}{\mkern1mu}}}
+\newcommand\sfD{\fSector{\widetilde{\eulD}}}
+\newcommand\sfQ{\fSector{\widetilde{\eulQ}}}
+\newcommand\sfV{\fSector{\widetilde{\eulV}}}
+\newcommand\sfU{\fSector{\widetilde{\eulU}}}
+\newcommand\sfB{\fSector{\widetilde{\eulB}}}
+
+\newcommand\shn{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{\mathsfit{n}{\mkern1mu}}}}
+
+\newcommand\sgW{\gSector{W_g}}%\cmW
+\newcommand\sgQU{\gSector{(\eulQ\fSector{{\scriptstyle \widetilde{\eulU}}})}}
+
+\newcommand\sfW{\fSector{W_f}}%\cmW
+\newcommand\sfQU{\fSector{(\widetilde{\eulQ}\gSector{{\scriptstyle \eulU}})}}
+
+\newcommand\hK{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{K}}}
+\newcommand\hG{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{\Gamma}}}
+
+%--------------------BSSN Macros--------------------%
+
+\newcommand\gBSSN[1]{{\widebar{#1}}}
+\newcommand\fBSSN[1]{{\widehat{#1}}}
+\newcommand\hBSSN[1]{{\protect\accentset{\circ}{{#1}}}}
+\newcommand\lBSSN[1]{{\protect\accentset{\ast}{{#1}}}}
+
+\newcommand\hSpBS{\hSector{\hBSSN \chi}}
+
+\newcommand\pfg{\gSector{\partial_{\perp}}}
+\newcommand\pff{\fSector{\widetilde{\partial}_{\perp}}}
+%\newcommand\pfh{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{\partial}_{\perp}}}
+\newcommand\pfh{\hSector{\partial_{\scaleto{\#}{\hashsize}}}}
+%\ring{\partial_{\perp}}
+
+\newcommand\gconf{\gSector{\phi}}
+\newcommand\fconf{\fSector{\psi}}
+
+\newcommand\gMetBS{\gSector{\gBSSN g}}
+\newcommand\gSpBS{\gSector{\gBSSN \gamma}}
+\newcommand\gLapseBS{\gSector{\gBSSN{\alpha}}}
+\newcommand\gShiftBS{\gSector{\gBSSN N}}
+\newcommand\gShiftB{\gSector B}
+\newcommand\gShiftVecBS{\gSector{\gBSSN \vec{N}}}
+\newcommand\gABS{\gSector{\gBSSN A}}
+\newcommand\gKBS{\gSector{\gBSSN K}}
+\newcommand\gEBS{\gSector{\gBSSN e}}
+\newcommand\gDBS{\gSector{\gBSSN{D}}}
+\newcommand\gCCBS{\gSector{\gBSSN{\eulC}}}
+\newcommand\gCGBS{\gSector{\gBSSN{\eulG}}}
+\newcommand\gCEBS{\gSector{\gBSSN{\eulE}}}
+\newcommand\gG{\gSector{\Gamma}}
+\newcommand\gGBS{\gSector{\gBSSN \Gamma}}
+\newcommand\gL{\gSector{\gBSSN \Lambda}}
+\newcommand\gDG{\gSector{\bigtriangleup\gBSSN{\Gamma}}}
+\newcommand\gDback{\gSector{\gBSSN{D}_\mathtt{B}}}
+\newcommand\gGbackBS{\gSector{\gBSSN{\Gamma}_\mathtt{B}}}
+\newcommand\gRback{\gSector{\gBSSN{R}_\mathtt{B}}}
+\newcommand\gRBS{\gSector{\gBSSN{\eulR}}}
+\newcommand\gRiBS{\gSector{\gBSSN{R}}}
+
+%\newcommand\gA{\gSector{\gBSSN{a}}}
+%\newcommand\gB{\gSector{\gBSSN{b}}}\\
+\newcommand\gA{\gSector{a}}
+\newcommand\gB{\gSector{b}}
+\newcommand\gAo{\gSector{\gBSSN{A}_1}}
+\newcommand\gAt{\gSector{\gBSSN{A}_2}}
+\newcommand\gLo{\gSector{\gBSSN{\Lambda}^1}}
+
+\newcommand\po{\lSector{\sLp^1}}
+\newcommand\pt{\lSector{\sLp^2}}
+\newcommand\pth{\lSector{\sLp^3}}
+\newcommand\qo{\hSector{\hShift^r}}
+\newcommand\qt{\hSector{\hShift^r}}
+\newcommand\qth{\hSector{\hShift^r}}
+
+\newcommand\fMetBS{\fSector{\fBSSN f}}
+\newcommand\fSpBS{\fSector{\fBSSN \varphi}}
+\newcommand\fLapseBS{\fSector{\fBSSN{\alpha}}}
+\newcommand\fShiftBS{\fSector{\fBSSN M}}
+\newcommand\fShiftB{\fSector B}
+\newcommand\fShiftVecBS{\fSector{\fBSSN \vec{M}}}
+\newcommand\fABS{\fSector{\fBSSN A}}
+\newcommand\fKBS{\fSector{\fBSSN K}}
+\newcommand\fEBS{\fSector{\fBSSN m}}
+\newcommand\fEbBS{\fSector{\fBSSN{m}_\mathtt{1}}}
+\newcommand\fEtrBS{\fSector{\fBSSN{m}_\mathrm{o}}}
+\newcommand\fDBS{\fSector{\fBSSN{D}}}
+\newcommand\fCCBS{\fSector{\fBSSN{\eulC}}}
+\newcommand\fCGBS{\fSector{\fBSSN{\eulG}}}
+\newcommand\fCEBS{\fSector{\fBSSN{\eulE}}}
+\newcommand\fG{\fSector{\protect\tilde \Gamma}}
+\newcommand\fGBS{\fSector{\fBSSN \Gamma}}
+\newcommand\fL{\fSector{\fBSSN \Lambda}}
+\newcommand\fDG{\fSector{\bigtriangleup\fBSSN{\Gamma}}}
+\newcommand\fDback{\fSector{\fBSSN{D}_\mathtt{B}}}
+\newcommand\fGbackBS{\fSector{\fBSSN{\Gamma}_\mathtt{B}}}
+\newcommand\fRback{\fSector{\fBSSN{R}_\mathtt{B}}}
+\newcommand\fRBS{\fSector{\fBSSN{\eulR}}}
+\newcommand\fRiBS{\fSector{\fBSSN{R}}}
+
+\newcommand\fA{\fSector{\protect\widetilde{a}}}
+\newcommand\fB{\fSector{\protect\widetilde{b}}}
+%\newcommand\fA{\fSector{\fBSSN{a}}}
+%\newcommand\fB{\fSector{\fBSSN{b}}}
+\newcommand\fAo{\fSector{\fBSSN{A}_1}}
+\newcommand\fAt{\fSector{\fBSSN{A}_2}}
+\newcommand\fLo{\fSector{\fBSSN{\Lambda}^1}}
+
+\newcommand\hSBS{\mSector{\eulS}}
+\newcommand\hDBS{\hSector{\hBSSN{D}}}
+\newcommand\hGBS{\hSector{\hBSSN \Gamma}}
+\newcommand\hDback{\hSector{\hBSSN{D}_\mathtt{B}}}
+\newcommand\hKBS{\hSector{\hBSSN K}}
+\newcommand\hShiftB{\hSector{\hBSSN B}}
+\newcommand\hL{\hSector{\hBSSN \Lambda}}
+\newcommand\hDG{\hSector{\bigtriangleup\hBSSN{\Gamma}}}
+\newcommand\hGbackBS{\hSector{\hBSSN{\Gamma}_\mathtt{B}}}
+\newcommand\hRback{\hSector{\hBSSN{R}_\mathtt{B}}}
+\newcommand\hRiBS{\hSector{\hBSSN{R}}}
+
+\newcommand\gdetBS{\gSector{\gBSSN \Delta}}
+\newcommand\fdetBS{\fSector{\fBSSN \Delta}}
+\newcommand\hdetBS{\hSector{\protect\accentset{\circ}{\Delta}}}
+
+\newcommand\grhoBS{\gSector{\gBSSN \rho}}
+\newcommand\gjotaBS{\gSector{\gBSSN j}}
+\newcommand\gJotaBS{\gSector{\gBSSN J}}
+
+\newcommand\frhoBS{\fSector{\fBSSN \rho}}
+\newcommand\fjotaBS{\fSector{\fBSSN j}}
+\newcommand\fJotaBS{\fSector{\fBSSN J}}
+
+\newcommand\sgnBS{\gSector{\gBSSN{\mathsfit{n}{\mkern1mu}}}}
+\newcommand\sgDBS{\gSector{\gBSSN \eulD}}
+\newcommand\sgQBS{\gSector{\gBSSN \eulQ}}
+\newcommand\sgVBS{\gSector{\gBSSN \uelV}}
+\newcommand\sgUBS{\gSector{\gBSSN \eulU}}
+\newcommand\sgBBS{\gSector{\gBSSN \eulB}}
+
+\newcommand\sfnBS{\fSector{\fBSSN{\mathsfit{n}{\mkern1mu}}}}
+\newcommand\sfDBS{\fSector{\fBSSN \eulD}}
+\newcommand\sfQBS{\fSector{\fBSSN \eulQ}}
+\newcommand\sfVBS{\fSector{\fBSSN \uelV}}
+\newcommand\sfUBS{\fSector{\fBSSN \eulU}}
+\newcommand\sfBBS{\fSector{\fBSSN \eulB}}
+
+\newcommand\sgWBS{\gSector{\gBSSN \eulW}}
+\newcommand\sgQUBS{\gSector{(\gBSSN{\eulQ}\fSector{{\scriptstyle \fBSSN{\eulU}}})}}
+
+\newcommand\sfWBS{\fSector{\fBSSN \eulW}}
+\newcommand\sfQUBS{\fSector{(\fBSSN{\eulQ}\gSector{{\scriptstyle \gBSSN{\eulU}}})}}
+
+\newcommand\sLsBS{\lSector{\boldsymbol{\lBSSN{\Lambda}}_\mathrm{s}}}
+\newcommand\sRsBS{\lSector{\boldsymbol{\lBSSN{\mathrm{R}}}}}
+\newcommand\sRbarBS{\lSector{\boldsymbol{\lBSSN{\mathrm{R}}_\mathrm{o}}}}
+\newcommand\sLtBS{\lSector{\lBSSN{\lambda}}}
+\newcommand\sLvBS{\lSector{\lBSSN{\boldsymbol{\mathrm{v}}}}}
+\newcommand\sLpBS{\lSector{\lBSSN{\boldsymbol{\mathrm{p}}}}}
+\newcommand\svec{\lSector{\boldsymbol{\mathrm{u}}}}
+
+\newcommand\CDf{\protect\accentset{\mathtt{F}}{\nabla}}
+\newcommand\hg{\gSector{h_g}}
+\newcommand\hf{\fSector{h_f}}
+
+\newcommand\quadg{\gSector{Q^\mathrm{b}_g}}
+\newcommand\quadf{\fSector{Q^\mathrm{b}_f}}
+
+\newcommand\conn{\mSector{C}}
+\newcommand\connf{\mSector{\widetilde{C}}}
+\newcommand\conng{\mSector{\protect\accentset{\scaleto{\#}{\hashsize}}{C}}}
+
+%--------------------Original Macros--------------------%
+
+\newcommand\hMet{\hSector h}
+\newcommand\hSp{\hSector{\chi}}
+\newcommand\hLapse{\hSector H}
+\newcommand\hShift{\hSector q}
+\newcommand\hShiftVec{\hSector q}
+\newcommand\hCC{\hSector{\bar{\mathcal{C}}}}
+
+\newcommand\sL{\lSector{\boldsymbol{\Lambda}}}
+\newcommand\sR{\lSector{\boldsymbol{\mathrm{P}}}}
+\newcommand\sLs{\lSector{\boldsymbol{\Lambda}_\mathrm{s}}}
+\newcommand\sLt{\lSector{\lambda}}
+\newcommand\sLtinv{\lSector{\lambda^{-1}}}
+\newcommand\sLv{\lSector{\boldsymbol{\mathrm{v}}}}
+\newcommand\sLp{\lSector{\boldsymbol{\mathrm{p}}}}
+\newcommand\sLw{\lSector{\boldsymbol{\mathrm{w}}}}
+\newcommand\sRs{\lSector{\boldsymbol{\mathrm{R}}}}
+\newcommand\sRbar{\lSector{\boldsymbol{\mathrm{R}}_\mathrm{o}}}
+
+\newcommand\LId{\lSector{\boldsymbol{\mathtt{1}}}}
+\newcommand\sI{\lSector{\boldsymbol{\mathrm{I}}}}
+\newcommand\sEta{\lSector{\boldsymbol{\mathrm{\delta}}}}
+\newcommand\Eta{\lSector{\boldsymbol{\mathrm{\eta}}}}
+\newcommand\LT{\lSector{\boldsymbol{\mathrm{L}}}}%\Lambda_\mathrm{o}
+
+\newcommand\gdet{\gSector{\Delta}}
+\newcommand\fdet{\fSector{\protect\tilde \Delta}}
+\newcommand\hdet{\hSector{\protect\accentset{\scaleto{\#}{\hashsize}}{\Delta}}}
+
+\newcommand\mR{\mSector{\wideparen{R}}}
+\newcommand\esp[2]{\left\langle\mR\right\rangle ^{#1}_{#2}}
+
+\ifColors
+
+  \newcommand\signV{\,\VColor{\stackrel{{\scriptscriptstyle (V)}}{-}}\,}
+  \newcommand\usignV{\VColor{\stackrel{{\scriptscriptstyle (V)}}{-}}\,}
+  \newcommand\isignV{\,\VColor{\stackrel{{\scriptscriptstyle (V)}}{+}}\,}
+  \newcommand\uisignV{\VColor{\stackrel{{\scriptscriptstyle (V)}}{+}}\,}
+
+  \newcommand\signK{\,\KColor{\stackrel{{\scriptscriptstyle (K)}}{-}}\,}
+  \newcommand\usignK{\KColor{\stackrel{{\scriptscriptstyle (K)}}{-}}\,}
+  \newcommand\isignK{\,\KColor{\stackrel{{\scriptscriptstyle (K)}}{+}}\,}
+  \newcommand\uisignK{\KColor{\stackrel{{\scriptscriptstyle (K)}}{+}}\,}
+
+  \newcommand\signKV{\,\KVColor{\stackrel{{\scriptscriptstyle (KV)}}{+}}\,}
+  \newcommand\usignKV{\KVColor{\stackrel{{\scriptscriptstyle (KV)}}{+}}\,}
+  \newcommand\isignKV{\,\KVColor{\stackrel{{\scriptscriptstyle (KV)}}{-}}\,}
+  \newcommand\uisignKV{\KVColor{\stackrel{{\scriptscriptstyle (KV)}}{-}}\,}
+
+\else
+
+  \newcommand\signV{\,-\,}
+  \newcommand\usignV{-\,}
+  \newcommand\isignV{\,+\,}
+  \newcommand\uisignV{}
+  
+  \newcommand\signK{\,-\,}
+  \newcommand\usignK{-\,}
+  \newcommand\isignK{\,+\,}
+  \newcommand\uisignK{}
+  
+  \newcommand\signKV{\,+\,}
+  \newcommand\usignKV{}
+  \newcommand\isignKV{\,-\,}
+  \newcommand\uisignKV{-\,}
+
+\fi
+
+\newcommand\hrD{\hrColor D}
+\newcommand\hrQ{\hrColor Q}
+\newcommand\hrn{\hrColor n}
+\newcommand\hrDn{\hrColor{Dn}}
+\newcommand\hrx{\hrColor x}
+\newcommand\hrV{\hrColor V}
+\newcommand\hrU{\hrColor U}
+\newcommand\hrVbar{\hrColor{\bar{V}}}
+\newcommand\hrWbar{\hrColor{\bar{W}}}
+\newcommand\hrSV{\hrColor S}
+\newcommand\hrUtilde{\hrColor{\protect\tilde{U}}}
+\newcommand\hrVubar{\hrColor{\underbar{V}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\fi  % avoid the redefinitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,112 @@
+\chapter*{Introduction}
+\label{ch:intro}
+\fancyhead[RE]{\textit{Introduction}}
+\fancyhead[LO]{\textit{Introduction}}
+
+\paragraph{Presentation of the thesis.} This thesis is about a theory of gravity, called Hassan--Rosen bimetric theory or bimetric relativity, which is an extension of general relativity. Bimetric relativity is a geometric theory of gravity, as general relativity, and as such it can be studied using the methods developed for general relativity. The studies described in this thesis extend several theoretical and numerical methods used in general relativity, to bimetric relativity.
+
+An intuitive phenomenon due to the gravitational interaction is gravitational collapse. This phenomenon is the most relevant gravitational process, due to the innate attractiveness of gravity. Gravitational collapse is at the basis of our understanding of physical systems at very different length scales, for example stellar, compact stars and black hole formation at small length scales, and solar systems, galaxies and galaxies' clusters formation at large length scales. In cosmology, structure formation relies on gravitational collapse on a homogeneous and isotropic expanding spacetime.
+
+Therefore, it is fundamental to understand the dynamics of gravitational collapse in extended theories of gravity, since any such theory has to be able to provide sensible predictions about the physical processes mentioned above. This thesis discusses necessary steps undertaken in order to shed light on gravitational collapse in bimetric relativity. These studies clarify many aspects of the theory, and open unexpected research paths. Understanding gravitational collapse in bimetric relativity is the overarching motivation behind the studies described in the thesis.
+
+The main results concern different, but connected, theoretical areas of bimetric relativity. One is the formal theory, with results on: (i) how the symmetries of spacetime (e.g., spherical symmetry) can be used to constrain the solutions to the equations of motion of bimetric relativity, in particular those describing gravitational collapse and (ii) how the equations of motion can be integrated numerically. For clarity, a symmetry of spacetime is a transformation of spacetime which leaves some of its geometrical properties unaltered. These results are obtained with methods closely following those used in general relativity, originating from geometry and the theory of partial differential equations. The other area concerns the numerical integration of the equations of motion of the theory, the bimetric field equations, and the results regard: (iii) the study of static, spherically symmetric black hole solutions, which, under appropriate conditions, are assumed to be the end state of a spherically symmetric gravitational collapse and (iv) the study of spherically symmetric gravitational collapse of pressureless matter.
+
+The thesis points out the great success of general relativity in describing Nature, but it also provides motivations for extending it, based on some of the most important contemporary open problems in physics, namely the quantum gravity problem, the dark matter and dark energy problems and the cosmological constant problem. To be well-motivated, an extended theory of gravity as bimetric relativity should provide better explanations than general relativity to some of these problems, and at the same time provide predictions in equal or better agreement than general relativity with observations. With this considerations in mind, the aim of this thesis is twofold. First, to explain why and how bimetric relativity helps us in the understanding of the aforementioned open problems. Second, the thesis provides the background needed to understand the accompanying research papers, whose results are reviewed. The goal of these studies is to allow future research to obtain predictions that can be compared with observations. This constitutes the major part of the thesis. Also, the thesis provides details about the research studies not contained in the research papers.
+
+\paragraph{Motivation behind the thesis.} In general relativity, spherically symmetric gravitational collapse is studied both in flat spacetime and in homogeneous, isotropic spacetimes. In the first case, an exact solution to the Einstein field equations in the presence of pressureless dust, namely the Oppenheimer--Snyder one \cite{PhysRev.56.455}, can be found, making use of the Jebsen--Birkhoff theorem. The latter theorem states that, in general relativity, any region of a spherically symmetric vacuum spacetime must be equivalent to a region of the Schwarzschild spacetime describing a static and spherically symmetric black hole. The second case makes use of the linear perturbation theory established in \cite{Lifshitz:1945du} (see also \cite[Ch.~5-6]{weinberg2008cosmology}). This consists in introducing linear scalar, vector and tensor perturbations and studying their linear dynamics. Vector perturbations do not play an important role, since they decay quickly. Tensor perturbations describe gravitational waves and scalar perturbations describe gravitational collapse of matter. The study of scalar perturbations culminates in the explanation of structure formation in our Universe.
+
+In bimetric relativity, the standard way to study gravitational collapse has been to introduce linear perturbations theory on both flat, and homogeneous, isotropic spacetimes. This is due to two reasons, namely the success of this method in general relativity and the fact that the equations of motion are harder to deal with in bimetric relativity compared to general relativity, hence linearization certainly helps to simplify the problem. The study of scalar perturbations in bimetric relativity led to the result that matter collapses too quickly (the so-called gradient instability) compared to general relativity, or that the theory is inconsistent \cite{Comelli2012,PhysRevD.86.043517,Berg_2012,Fasiello_2013,PhysRevD.90.044030,PhysRevD.90.084003,Felice_2014,Solomon_2014,PhysRevD.90.124014,Lagos_2014,PhysRevD.91.084046,PhysRevD.91.104019,PhysRevD.99.104032}.
+
+This conclusion resulted in a skepticism towards bimetric relativity over the past few years, after a very fertile period of several years immediately subsequent to its birth in 2011. However, the conclusion that linear perturbation theory leads to instabilities, does not imply that bimetric relativity cannot explain gravitational collapse in a way consistent with observations. It only means that linear perturbation theory, whose validity is restricted to when higher order perturbations are much smaller than the linear ones, which have to be much smaller than the background as well, very quickly loses its validity and cannot be used to draw conclusions about the physical system under consideration.
+
+This state of affairs is not new in the field of modified and extended theories of gravity. Already in the seventies, van Dam and Veltman \cite{VANDAM1970397}, and Zakharov \cite{1970JETPL12312Z} showed that predictions obtained in general relativity are not recovered in the limit when these theories are supposed to tend to general relativity. However, the conclusion was based on a linear analysis. In \cite{VAINSHTEIN1972393}, Vainshtein argued that the inclusion of nonlinearities provides a smooth limit to general relativity. The Vainshtein mechanism was then studied in more detail in bimetric relativity in \cite{PhysRevD.92.044054,Enander_2015}.
+
+There are many modified and extended theories of gravity. The possible ways one can construct such theories are constrained and at the same time suggested by Lovelock's theorem \cite{doi:10.1063/1.1665613,doi:10.1063/1.1666069}. Before stating it, we remind the reader that the dynamical field in general relativity is the metric, that is, a function that defines a method to measure distances between any two points in spacetime. Lovelock's theorem establishes that, starting from a Lagrangian density involving only the metric, the only possible second-order Euler--Lagrange field equations in four dimensions are the Einstein field equations with a nonzero cosmological constant. In \cite{CLIFTON20121} it is pointed out that, due to Lovelock's theorem, a modified or extended theory of gravity can be constructed by doing one or more of the following:
+\begin{enumerate}
+	\item Replace the metric, or add other fields interacting with it.
+	\item Consider field equations with derivatives higher than second.
+	\item Consider a space with dimension different than 4.
+	\item Consider field equations not arising from an action principle.
+	\item Consider non-local field equations.
+\end{enumerate}
+Reviews on theories constructed by using these pathways can be found in \cite{CLIFTON20121}. Here, we do not talk about higher-derivative, non-local and higher dimensional theories, since bimetric relativity does not belong to these categories. Rather, it is obtained by adding a new field interacting with the metric, namely another metric. Hence, in a bimetric spacetime there are two different distance measures but, for any given type of matter inhabiting the spacetime, only one of them is relevant. More details are provided in the thesis. For topics not treated in the thesis, we refer the reader to the review \cite{Schmidt-May:2015vnx} on bimetric relativity and \cite{deRham:2014zqa} on the closely related massive gravity theory. Other types of theories obtainable by adding fields interacting with the metric tensor are, for example, scalar-tensor theories adding a scalar field, and tensor-vector-scalar theories, adding both a scalar and a vector field. The reason why bimetric relativity stands out among these theories is explained in the thesis.
+
+\paragraph{Summary of the thesis.} Since the results coming from linear analysis are not reliable in bimetric relativity, the studies presented in this thesis are fully nonlinear. That is, the bimetric field equations are never considered under limits that neglect some of their parts, or under analytical approximations. The nonlinear study is done in different ways. One way is to study symmetries of spacetime and how they affect the bimetric field equations and the relevant fields in the theory. Another is to look for exact solutions to the bimetric field equations. Yet another way is to numerically integrate the bimetric field equations; this requires a recasting of them in a suitable form.
+
+Symmetries of spacetime have been widely studied in general relativity, with the purpose of simplifying the Einstein field equations in the aim of finding exact solutions to them. The first part of the thesis uses the same approach in bimetric relativity, as described in \PaperI. The study of spacetime symmetries led to the discovery of a novel nonstationary spherically symmetric vacuum solution in bimetric relativity, whose relevance and importance are explained in \PaperII. Symmetries of spacetime also play a major role in determining the properties of static and spherically symmetric black hole solutions, whose analytical and numerical properties are reported in \PaperIII.
+
+The numerical integration of the bimetric field equations can be done in several ways. If the equations are reduced to ordinary differential equations through, for example, the assumptions of some spacetime symmetries, the numerical integration can be performed after rewriting the equations in so-called normal form. This form only involves first-order derivatives with respect to the unique independent variable considered, and is solved for them. This is done in \PaperIII when solving for static and spherically symmetric black hole solutions. When moving to spherically symmetric gravitational collapse, the bimetric field equations become partial differential equations. As such, they need to be treated in a specific way to ensure existence, uniqueness and, roughly speaking, stability of the solutions. The same is true in the case of general relativity, where the problem is faced by means of a rewriting of the Einstein field equations which differentiates between space and time, the so-called \threePlusOne formalism. The field concerning the numerical integration of this formulation of the Einstein field equations is called numerical relativity. The same rewriting can be applied to the bimetric field equations, and the results of \PaperIV, \PaperV, \PaperVI and \PaperVII concern the development of this particular reformulation of the bimetric field equations. The first results on bimetric gravitational collapse obtained using such a reformulation of the bimetric field equations are presented in \PaperVIII, and constitute the first results in numerical bimetric relativity.
+
+The importance of \PaperI, \PaperV, \PaperVI and \PaperVII is based on the fact that their results are fully general. Hence, they may be used not only to look for solutions describing gravitational collapse, but also to look for other type of solutions, for example rotating black holes and stars, binary systems of black holes and compact stars, and gravitational radiation. The importance of \PaperII and \PaperIII resides in clarifying how the results of \PaperI about spacetime symmetries affect particular solutions of the theory, and to clarify what types of spherically symmetric static and dynamical vacuum spacetimes are solutions to the bimetric field equations. \PaperIV and \PaperVIII are the first works which prepare and perform the numerical integration of the bimetric field equations, rewritten in the \threePlusOne formalism.
+
+The findings of \PaperVIII do not show any sign of physical instabilities in the gravitational collapse of a spherically symmetric cloud of pressureless dust. The simulations described in \PaperVIII are not numerically stable, hence the evolution can be followed for a rather short time. Yet, if an exponential grow was to happen, it should be evident early in the evolution, and this is not the case. %On the contrary, the bimetric gravitational collapse seems to happen a little slower than in general relativity. 
+Obtaining long-term numerically stable bimetric simulations is matter of ongoing work, initiated with the studies in \PaperV and \PaperVI.
+
+\paragraph{Structure of the thesis.} The thesis is structured in three main parts. \autoref{part:1} is independent from \autoref{part:2}. The reading of \autoref{part:1} before \autoref{part:2} is advised, though not necessary. Suggestions about what parts of the thesis may be skipped by a reader familiar with some of the treated topics are provided in \autoref{tab:guide}.
+
+\autoref{part:1} contains the results obtained in the covariant formulation, that is, without rewriting the bimetric field equations in the \threePlusOne formalism. \autoref{ch:HR} provides motivations in support of the study of bimetric relativity, and  introduces some of its theoretical features. \autoref{ch:symmetries} reviews the concept of spacetime symmetry and describes the results of \PaperI. \autoref{ch:BH} summarizes the results of \PaperII and \PaperIII mainly from the viewpoint of \PaperI, but also emphasizes their standalone importance.
+
+\begin{table}
+\centering
+\tabulinesep=2mm
+\begin{tabu}[t]{P{0.175\textwidth}P{0.4\textwidth}P{0.125\textwidth}P{0.15\textwidth}}
+	\toprule 
+ 	\multirow[c]{12}{=}{\centering The reader familiar with}	& \multirow[c]{2}{=}{\centering History of and motivations for bimetric relativity}  & \multirow[c]{12}{=}[-0mm]{\centering may skip}  & \multirow[c]{2}{=}{\centering \autoref{sec:motivations}} \\
+ 																						& & & \\
+ 																						& \multirow[c]{2}{=}{\centering Covariant formulation of bimetric relativity} &  & \multirow[c]{2}{=}{\centering \autoref{sec:formulation}} \\
+ 																						& & & \\
+ 																						& \multirow[c]{2}{=}{\centering Symmetries of spacetime} & & \multirow[c]{2}{=}{\centering \autoref{sec:geometry}} \\
+ 																						& & & \\
+ 																						& \multirow[c]{2}{=}{\centering Theory of partial differential equations} &  & \multirow[c]{2}{=}{\centering \autoref{ch:pde}} \\
+ 																						& & & \\
+ 																						& \multirow[c]{2}{=}{\centering \threePlusOne decomposition in general relativity} & & \multirow[c]{2}{=}{\centering \autoref{ch:3p1}} \\
+ 																						& & & \\
+ 																						& \multirow[c]{2}{=}{\centering \threePlusOne decomposition in bimetric relativity} & & \autoref{sec:bimfoliation} \\
+ 																						& & & \autoref{sec:bim3p1} \\
+ 	\bottomrule
+\end{tabu}
+\caption{Suggestions about how to read this thesis.}
+\label{tab:guide}
+\end{table}
+
+\autoref{part:2} includes the results obtained in the \threePlusOne formulation. \autoref{ch:pde} reviews aspects of the theory of partial differential equations, needed to understand the results of \PaperV, \PaperVI, \PaperVII and \PaperVIII. \autoref{ch:3p1} reviews the \threePlusOne decomposition in general relativity, needed to understand the results of \PaperIV, \PaperV, \PaperVI, \PaperVII, \PaperVIII and \PaperVIII. \autoref{ch:nubirel} reviews the literature concerning the \threePlusOne decomposition in bimetric relativity and summarizes the results of \PaperIV, \PaperV, \PaperVI, \PaperVII and \PaperVIII.
+
+\autoref{part:3} includes the accompanying papers.%The reader familiar with the cosmological constant problem and the history of bimetric relativity may skip \autoref{sec:motivations}, whereas the reader familiar with the covariant formulation of bimetric relativity may skip \autoref{sec:formulation}. The reader familiar with symmetries of spacetime may skip \autoref{sec:geometry}. The reader familiar with the theory of partial differential equations may skip \autoref{ch:pde}, whereas the reader familiar with the \threePlusOne decomposition in general relativity may skip \autoref{ch:3p1}. The reader familiar with the \threePlusOne formulation in bimetric relativity may skip \autoref{sec:bimfoliation} and \autoref{sec:bim3p1}.
+
+\begin{comment}
+\begin{table}
+\centering
+\tabulinesep=1mm
+\begin{tabu}[t]{P{0.175\textwidth}P{0.4\textwidth}P{0.125\textwidth}P{0.15\textwidth}}
+	\toprule 
+ 	\multirow[c]{6}{=}{\centering The reader familiar with}		& History of and motivations for bimetric relativity  & \multirow[c]{6}{=}[-0mm]{\centering may skip}  & \autoref{sec:motivations} \\
+ 																						& Covariant formulation of bimetric relativity &  & \autoref{sec:formulation} \\
+ 																						& Symmetries of spacetime & & \autoref{sec:geometry} \\
+ 																						& Theory of partial differential equations &  & \autoref{ch:pde} \\
+ 																						& \threePlusOne decomposition in general relativity & & \autoref{ch:3p1} \\
+ 																						& \threePlusOne decomposition in bimetric relativity & & \autoref{sec:bim3p1} \\
+ 	\bottomrule
+\end{tabu}
+\caption{Suggestions about how to read this thesis.}
+\label{tab:guide}
+\end{table}
+
+\vspace{0.5cm}
+\ftadd{
+	\begin{enumerate}
+		\item \checkmark Introduction to the introduction: a short version (of only a few paragraphs) of the thesis' aims, research questions, contribution, objectives and findings.
+    	\item \checkmark State the overarching topic and aims of the thesis in more detail
+    	\item \checkmark Provide a brief review of the literature related to the topic (this will be very brief if you have a separate literature review chapter)
+    	\item \checkmark Define the terms and scope of the topic
+    	\item \checkmark Critically evaluate the current state of the literature on that topic and identify your gap
+    	\item \checkmark Outline why the research is important and the contribution that it makes
+    	\item \checkmark Outline your epistemological and ontological position
+    	\item \checkmark Clearly outline the research questions and problem(s) you seek to address
+    	\item State the hypotheses (if you are using any)
+    	\item Detail the most important concepts and variables 
+    	\item Briefly describe your methodology
+    	\item \checkmark Discuss the main findings
+    	\item \checkmark Discuss the layout of the thesis
+	\end{enumerate}
+}
+\end{comment}

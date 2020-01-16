@@ -1,0 +1,641 @@
+\documentclass[a4paper,11pt,twoside,openright,titlepage,makeidx]{book}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pagecolor}
+\usepackage{afterpage}
+\newcommand{\onepagecolor}[1]{%
+\newpagecolor{#1}\afterpage{\restorepagecolor}}
+\usepackage{enumitem}
+\usepackage{calligra}
+\usepackage{xspace}
+%\usepackage{float}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage{appendix}
+\usepackage{imakeidx}
+\usepackage{relsize}
+\usepackage{textgreek}
+\usepackage{afterpage}
+\usepackage{siunitx}
+
+\usepackage{epigraph}
+
+\newcommand{\nocontentsline}[3]{}
+\newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
+
+%\usepackage[inactive,blur=0.6, fixcolor]{fancytooltips}
+
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+
+\usepackage{pdfpages}
+\usepackage{ifoddpage}
+\usepackage{slashed}
+\usepackage[protrusion=true]{microtype}
+\usepackage{emptypage}
+
+\usepackage[subfigure]{tocloft}
+
+\usepackage{parskip}
+\setlength{\parskip}{0mm}
+\setlength{\parindent}{6mm}
+%\setlength{\belowcaptionskip}{-10mm}
+\linespread{1}
+
+%%-----------------------------Counters-----------------------------%%
+
+\setcounter{tocdepth}{3}
+
+\renewcommand{\thepart}{\Roman{part}}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\thechapter .\arabic{section}}
+
+\newcounter{thepaper}
+
+%%-----------------------------End counters-----------------------------%%
+
+%%-----------------------------Comments-----------------------------%%
+
+\usepackage{verbatim}
+
+%%-----------------------------End comments-----------------------------%%
+
+%%-----------------------------Page layout-----------------------------%%
+
+\usepackage[big]{layaureo}
+
+\usepackage{marginnote}
+%\usepackage[a4paper,top=3cm,bottom=3cm,inner=3.5cm,outer=3cm,heightrounded,bindingoffset=5mm, marginparwidth=1.5cm, marginparsep=0.3cm,showframe]{geometry}
+%,showframe
+%\usepackage[paperwidth=165mm,paperheight=242mm]{geometry}
+
+\usepackage{titlesec}
+\titlespacing*{\paragraph}{6mm}{3mm}{2mm}
+%\titlespacing*{\part}{0cm}{3cm}{1.5cm}
+%\titleformat{\part}[display]{\flushright\normalfont\huge\bfseries}{\thepart}{30pt}{\Huge}
+%\titlespacing*{\chapter}{0cm}{2cm}{1.5cm}
+%\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\thechapter}{30pt}{\Huge}
+%\titleformat{\chapter}[display]{\normalfont\huge\bfseries\centering}{\chaptertitlename\hspace{2mm} \thechapter \\ \vspace{0.4cm}\titlerule}{-2.1cm}{}
+
+\usepackage{tikz} % for \gradientbox below.
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{comment}
+\usepackage{eso-pic}
+\newcommand{\gradientbox}[3]{%
+  \begin{tikzpicture}
+    \node[left color=#1,right color=#2] {#3};
+  \end{tikzpicture}%
+}
+
+\AddToShipoutPicture*{%
+  \AtPageLowerLeft{%
+    \rotatebox{90}{
+      \gradientbox{blue!20}{white}{%
+        \begin{minipage}{\paperheight}%
+          \hspace*{ \stretch{1} }\textcopyright~2013 \makeatletter\@author\makeatother.\hspace*{ \stretch{1} }
+        \end{minipage}%
+      }
+    }%
+  }%
+}
+\end{comment}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+\renewcommand{\sectionmark}[1]{ \markright{#1} }
+
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{\thechapter. \nouppercase{\leftmark}} }
+\fancyhead[LO]{\textit{\thesection. \nouppercase{\rightmark}} }
+
+\newcommand{\ChapterThumb}{\ThumbBox{Chapter \arabic{chapter}}{0}}
+
+\usepackage{setspace}
+\onehalfspacing
+\frenchspacing
+
+%%-----------------------------Font-----------------------------%%
+
+%\renewcommand*\rmdefault{ppl}
+
+%%-----------------------------End font-----------------------------%%
+
+%%-----------------------------Widow and orphans-----------------------------%%
+
+\widowpenalty=300
+\clubpenalty=300
+
+%\setlength{\parskip}{3ex plus 2ex minus 2ex}
+
+%%-----------------------------End widow and orphans-----------------------------%%
+
+%%-----------------------------End page layout-----------------------------%%
+
+%%-----------------------------Mathematics-----------------------------%%
+
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+%\usepackage{mathbbol}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amsart}
+\usepackage[cal=dutchcal]{mathalfa}
+\usepackage{nicefrac}
+\allowdisplaybreaks
+\usepackage{tensor}
+
+\theoremstyle{definition}
+\newtheorem*{defn*}{\protect\definitionname}
+\providecommand{\definitionname}{Definition}
+
+\theoremstyle{definition}
+\newtheorem{defn}{\protect\definitionname}
+\providecommand{\definitionname}{Definition}
+
+\theoremstyle{plain}
+\newtheorem*{prop*}{\protect\propositionname}
+\providecommand{\propositionname}{Proposition}
+
+\theoremstyle{plain}
+\newtheorem{prop}{\protect\propositionname}
+\providecommand{\propositionname}{Proposition}
+
+\theoremstyle{plain}
+\newtheorem{corollary}{\protect\corollaryname}
+\providecommand{\corollaryname}{Corollary}
+
+\theoremstyle{plain}
+\newtheorem*{corollary*}{\protect\corollaryname}
+\providecommand{\corollaryname}{Corollary}
+
+\newcounter{tmpcount} % temporary counters
+\newcounter{continuemain}
+\newcounter{continuesub}
+
+%%-----------------------------End mathematics-----------------------------%%
+
+\usepackage{ocg-p}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={Fit}, 
+    pdfpagelayout={SinglePage},
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1, key2, key3}, % list of keywords
+    pdfnewwindow=true,      % links in new PDF window
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+\def\chapterautorefname{Chapter}%
+\def\sectionautorefname{Section}%
+
+%\usepackage{cleveref}
+
+\newcommand{\PaperI}{\hyperref[PaperI]{Paper I}\xspace}
+\newcommand{\PaperII}{\hyperref[PaperII]{Paper II}\xspace}
+\newcommand{\PaperIII}{\hyperref[PaperIII]{Paper III}\xspace}
+\newcommand{\PaperIV}{\hyperref[PaperIV]{Paper IV}\xspace}
+\newcommand{\PaperV}{\hyperref[PaperV]{Paper V}\xspace}
+\newcommand{\PaperVI}{\hyperref[PaperVI]{Paper VI}\xspace}
+\newcommand{\PaperVII}{\hyperref[PaperVII]{Paper VII}\xspace}
+\newcommand{\PaperVIII}{\hyperref[PaperVIII]{Paper VIII}\xspace}
+
+\usepackage{bookmark}
+
+%%-----------------------------Nomenclature-----------------------------%%
+
+%refpage
+\usepackage[english]{nomencl}
+\makenomenclature
+\renewcommand{\nomname}{List of Acronyms}
+\setlength{\nomitemsep}{1.5mm}
+
+%%-----------------------------End nomenclature-----------------------------%%
+
+%%-----------------------------Table-----------------------------%%
+
+\usepackage{tabu}
+\usepackage{booktabs}
+\usepackage{multirow}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+%%-----------------------------End table-----------------------------%%
+
+%%-----------------------------Figures-----------------------------%%
+
+\usepackage{subfig}
+\usepackage{floatrow}
+\usepackage[section,above,below]{placeins}
+
+%%-----------------------------End figures-----------------------------%%
+
+%%-----------------------------BibLaTeX-----------------------------%%
+
+\usepackage[
+backend=biber,
+refsegment=part,
+%style=phys,
+%style=numeric,
+style=alphabetic,
+maxnames=4,
+minnames=4,
+maxbibnames=99,
+backref=true,
+backrefstyle=two,
+sorting=nymdt,
+arxiv=abs,
+natbib=true
+]{biblatex}
+
+\DeclareSortingScheme{nymdt}{
+  \sort{
+    \field{presort}
+  }
+  \sort[final]{
+    \field{sortkey}
+  }
+  \sort{
+    \name{sortname}
+    \name{author}
+    \name{label}
+    \name{editor}
+    \name{translator}
+    \field{sorttitle}
+    \field{title}
+  }
+  \sort{
+    \field{sortyear}
+    \field{year}
+  }
+  \sort{
+    \field[padside=left,padwidth=2,padchar=0]{month}
+    \literal{00}
+  }
+  \sort{
+    \field[padside=left,padwidth=2,padchar=0]{day}
+    \literal{00}
+  }
+  \sort{
+    \field{sorttitle}
+  }
+  \sort{
+    \field[padside=left,padwidth=4,padchar=0]{volume}
+    \literal{0000}
+  }
+}
+
+\appto{\bibsetup}{\raggedright}
+
+\DeclareBibliographyCategory{includedpapers}
+\newcommand{\mybibexclude}[1]{\addtocategory{includedpapers}{#1}}
+
+\addbibresource{PhD_thesis-2.bib}
+\addbibresource{PhD_thesis-1.bib}
+
+%%-----------------------------End BibLaTeX-----------------------------%%
+
+%%-----------------------------Title-----------------------------%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+
+%%-----------------------------End title-----------------------------%%
+
+%%-----------------------------Macros-----------------------------%%
+
+\newcommand{\bse}{\begin{subequations}}
+\newcommand{\ese}{\end{subequations}}
+
+\newcommand{\bc}{\begin{comment}}
+\newcommand{\ec}{\end{comment}}
+
+\newcommand{\mydet}[1]{\operatorname{det}\left(#1\right)}
+\newcommand{\mytr}[1]{\operatorname{Tr}\left(#1\right)}
+
+\newcommand{\f}[1]{\tilde{#1}}
+\newcommand{\g}[1]{#1}
+\newcommand{\iS}[1]{S^{-1})}
+
+\newcommand{\commdiag}[8]{
+\begin{matrix}
+& #1 & \overset{#5}{\longrightarrow} & #2 &  \\[1.5mm]
+#6\hspace{-3mm} & \big\downarrow  &  & \big\downarrow & \hspace{-3mm}#7 \\[1.5mm]
+& #3 & \underset{#8}{\longrightarrow} & #4 &
+\end{matrix}
+}
+\newcommand{\arel}{$A$-related }
+%\newcommand{\heta}{\hat{\eta} }
+\newcommand{\hxi}{\hat{\xi} }
+\newcommand{\sads}{Schwarzschild-anti-de Sitter }
+\newcommand{\sds}{Schwarzschild-de Sitter }
+\newcommand{\ads}{anti-de Sitter }
+\newcommand{\ds}{de Sitter }
+\global\long\def\eH{\mathrm{{\scriptscriptstyle H}}}
+
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\rhg}{r^{g}_\mathrm{\scriptstyle{H}}}
+\newcommand{\rhf}{r^{f}_\mathrm{\scriptstyle{H}}}
+
+\newcommand{\PD}[2]{\dfrac{\partial #1}{\partial #2}}
+
+%%-----------------------------End Macros-----------------------------%%
+
+%%-----------------------------Not slanted \mathscr-----------------------------%%
+
+\pdfmapfile{+rsfso.map}
+\DeclareSymbolFont{rsfso}{U}{rsfso}{m}{n}
+\DeclareSymbolFontAlphabet{\mathscr}{rsfso}
+
+%%-----------------------------End not slanted \mathscr-----------------------------%%
+
+\input{Preamble/ThumbBox}
+
+\newif\ifColors    \Colorstrue
+\newif\ifShowSigns    \ShowSignstrue
+\input{Preamble/macros.tex}
+
+\renewcommand{\labelenumi}{\theenumi}% Lower-case roman letters lists
+
+\makeindex
+
+\newcommand{\ftcomment}[1]{\color{blue} (#1)\color{black}\xspace}
+\newcommand{\fterror}[1]{\color{red} #1\color{black}\xspace}
+\newcommand{\ftadd}[1]{\color{ForestGreen} #1\color{black}\xspace}
+\newcommand{\ftreplace}[2]{\sout{#1} \color{ForestGreen}#2\color{black}\xspace}
+\newcommand{\ftemphas}[2]{\color{Dandelion}#1\footnote{\color{Dandelion}#2}\color{black}\xspace}
+
+\newcommand{\BR}{BR\xspace}
+
+\newcommand{\PartIII}{\hyperlink{part.3}{Part III}}
+
+\usepackage{accents}
+\usepackage{scalerel}
+
+\DeclareMathVersion{normal2}
+
+\begin{document}
+
+\renewcommand{\theenumi}{(\roman{enumi})}% Lower-case roman letters lists
+
+%\thispagestyle{empty}
+%\includepdf[height=29.7cm]{Frontmatter/lic-over-page-v1/lic-cover-front-cropped}
+%\cleardoublepage
+
+\thispagestyle{empty}
+
+\noindent Title of the thesis \newline
+{\Large Author}%\newline
+\cleardoublepage
+\begin{comment}
+\vspace{1cm}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\textwidth]{Figures/cover3.pdf}
+\end{figure}
+\vspace{-0.35cm}
+\begin{tcolorbox}[width=0.9\textwidth, opacityframe=0, opacityback=0, halign=center, valign = center, sharp corners = east]    
+  \footnotesize{Artistic illustration of two boost Killing vector fields (blue and red) of the metrics, for a solution of the bimetric field equations discussed in the thesis. See \autoref{ch:symmetries} and \autoref{fig:Boosts} for explanations.}
+\end{tcolorbox}
+\cleardoublepage
+\end{comment}
+
+\thispagestyle{empty}
+\includepdf[width=18.75cm]{Frontmatter/title-page2}
+
+\thispagestyle{empty}
+~\vspace{6cm}
+\begin{tcolorbox}[floatplacement=b,float, box align=bottom, width=0.9\textwidth, opacityframe=0, opacityback=0, halign=center, valign = center, sharp corners = east]    
+  \footnotesize{\emph{Cover image}:} %Artistic illustration of two boost Killing vector fields (blue and red) of the metrics, for a solution of the bimetric field equations discussed in the thesis. See \autoref{ch:symmetries} and \autoref{fig:Boosts} for explanations.}
+\end{tcolorbox}
+
+\frontmatter
+
+\fancyhead[RE]{\textit{\nouppercase{\leftmark}} }
+\fancyhead[LO]{\textit{\nouppercase{\rightmark}} }
+
+%\input{Frontmatter/Dedication}
+
+\input{Frontmatter/Abstract}
+
+\input{Frontmatter/Sammanfattning}
+
+\cleardoublepage
+\renewcommand{\cftpartnumwidth}{10mm}
+\renewcommand{\cftchapnumwidth}{10mm}
+\renewcommand{\cftsecindent}{10mm}
+\renewcommand{\cftsecdotsep}{\cftnodots}
+\tableofcontents
+
+\cleardoublepage
+
+\renewcommand{\cftfigdotsep}{\cftnodots}
+\renewcommand{\cfttabdotsep}{\cftnodots}
+\begingroup
+\listoffigures
+\cleardoublepage
+%\let\clearpage\relax
+\listoftables
+\endgroup
+
+\input{Frontmatter/Papers}
+
+\input{Frontmatter/Preface}
+
+\printnomenclature[1.75cm]
+
+\input{Frontmatter/Conventions}
+
+\input{Frontmatter/Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+\mainmatter
+
+\fancyhead[RE]{\textit{\thechapter. \nouppercase{\leftmark}}}
+\fancyhead[LO]{\textit{\thesection. \nouppercase{\rightmark}}}
+
+\part{1}
+\label{part:1}
+%\begin{refsection}
+
+\cleardoublepage
+\thispagestyle{empty}
+~\vspace{3cm}
+
+\renewcommand{\textflush}{flushleft}
+\setlength{\epigraphwidth}{\textwidth}
+\epigraph{
+\textsl{
+put a quotation, if you want
+}
+}{
+Someone
+}
+
+\input{Mainmatter/Chapter1}
+
+%\input{Mainmatter/ConclusionsI}
+%\fancyhead[RE]{\textit{Conclusion of Part I}}
+%\fancyhead[LO]{\textit{Conclusion of Part I}}
+
+%\newpage
+%\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+%\fancyhead[LO]{\textit{\nouppercase{\rightmark}}}
+%\printbibliography[heading = bibliography, title = References in Part I]
+
+%\newpage
+%\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+%\fancyhead[LO]{\textit{\nouppercase{\rightmark}}}
+%\addcontentsline{toc}{chapter}{References in Part I}
+%\printbibliography[segment=\therefsegment, heading = bibliography, title = References in Part I]
+
+%\end{refsection}
+
+\part{2}
+\label{part:2}
+
+\cleardoublepage
+\thispagestyle{empty}
+~\vspace{3cm}
+
+\renewcommand{\textflush}{flushleft}
+\setlength{\epigraphwidth}{\textwidth}
+\epigraph{
+\textsl{
+put a quotation, if you like to
+}
+}{
+someone else
+}
+
+\renewcommand{\textflush}{flushleft}
+\setlength{\epigraphwidth}{\textwidth}
+\epigraph{
+\textsl{
+another quotation?
+}
+}{
+some other guy
+}
+
+%\begin{refsection}
+
+\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+\fancyhead[LO]{\textit{\nouppercase{\rightmark}}}
+
+%\input{Mainmatter/ConclusionsII}
+
+%\newpage
+%\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+%\fancyhead[LO]{\textit{\nouppercase{\rightmark}}}
+%\printbibliography[heading = bibliography, title = References in Part II]
+
+%\newpage
+%\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+%\fancyhead[LO]{\textit{\nouppercase{\rightmark}}}
+%\addcontentsline{toc}{chapter}{References in Part II}
+%\printbibliography[segment=\therefsegment, heading = bibliography, title = References in Part II]
+
+%\end{refsection}
+
+\bookmarksetup{startatroot}
+\input{Mainmatter/Conclusion-outlook}
+\addcontentsline{toc}{chapter}{Conclusion and outlook}
+
+\begin{appendices}
+
+\input{Mainmatter/AppendixA} % Variation of the action
+
+\end{appendices}
+
+\backmatter
+
+\newpage
+\fancyhead[RE]{\textit{Bibliography}}
+\fancyhead[LO]{\textit{Bibliography}}
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography[notcategory=includedpapers]
+
+%\printindex
+
+\part{INCLUDED PAPERS}
+\label{part:3}
+
+\definecolor{vatten}{rgb}{0.607,0.698,0.808}
+\definecolor{himmel}{rgb}{0.631,0.847,0.878}
+
+\newcommand{\ColorOfPage}{himmel}
+%himmel
+
+\pagestyle{empty}
+\phantomsection
+\label{PaperI}
+\addcontentsline{toc}{chapter}{\numberline{I}...}
+~\vspace{3cm}
+\onepagecolor{\ColorOfPage}
+\begin{flushright}
+\begin{tcolorbox}[width=0.05\textwidth, colback={black}, colframe={black}, spread outwards, flush right, halign=center, valign = center, sharp corners = east]    
+   \color{\ColorOfPage}\Huge \textbf{Paper I}\color{black}
+\end{tcolorbox}
+\vspace{14cm}
+%spread outwards
+\begin{tcolorbox}[width=0.9\textwidth, opacityframe=0, opacityback=0, flush right, halign=flush right, valign = center, sharp corners = east]    
+   ...
+\end{tcolorbox}
+\end{flushright}
+%\tikz[remember picture,overlay] {%
+%\draw [\ColorOfPage ,line width=10mm]
+%(current page.south west)
+%rectangle
+%(current page.north east)
+%;}
+\cleardoublepage
+%\includepdf[pages=-]{Papers/PaperI.pdf}
+
+\newpage
+\pagestyle{empty}
+\phantomsection
+\addtocounter{chapter}{1}
+\label{PaperII}
+\addcontentsline{toc}{chapter}{\numberline{II}...}
+~\vspace{3cm}
+\onepagecolor{\ColorOfPage}
+\begin{flushright}
+%\vspace{\ThumbBoxH}
+\begin{tcolorbox}[width=0.075\textwidth, colback={black}, colframe={black}, spread outwards, flush right, halign=center, valign = center, sharp corners = east]    
+   \color{\ColorOfPage}\Huge \textbf{Paper II}\color{black}
+\end{tcolorbox}
+\vspace{14cm}
+%\vspace{-\ThumbBoxH}
+\begin{tcolorbox}[width=0.9\textwidth, opacityframe=0, opacityback=0, flush right, halign=flush right, valign = center, sharp corners = east]    
+   ...
+\end{tcolorbox}
+\end{flushright}
+\cleardoublepage
+%\includepdf[pages=-]{Papers/PaperII.pdf}
+
+\cleardoublepage
+\thispagestyle{empty}
+%\includepdf[height=29.7cm]{Frontmatter/lic-over-page-v1/lic-cover-back-cropped}
+
+\end{document}

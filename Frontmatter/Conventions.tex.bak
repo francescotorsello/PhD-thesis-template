@@ -1,0 +1,24 @@
+\tocless\chapter{Conventions and notation}
+\label{ch:conventions}
+
+\noindent In the thesis, the metric signature $(-1,1,1,1)$ is used. Geometric quantities are indicated both with indices and without depending on the context, if this does not create confusion. For example, a metric is written both $\gMet$ and $\gMet_{\mu\nu}$. Analogously, a vector field can be written $\mathcal{V}$ or $\mathcal{V^\mu}$. Spacetime indices are denoted with Greek letters and run from $0$ to $3$; spatial indices are denoted with latin letters and run from $1$ to $3$; boldface uppercase indices are Lorentz indices and run from $0$ to $3$; boldface lowercase indices are spatial Lorentz indices and run from $1$ to $3$.
+
+4-dimensional geometric quantities related to $\gMet$ are indicated with the pedix $\gMet$, for example $\gEinst$ is the Einstein tensor for $\gMet$. % and $\gVse$ is the bimetric stress--energy tensor coupled to $\gMet$.
+4-dimensional geometric quantities related to $\fMet$ are indicated with the pedix $\fMet$, for example $\fEinst$ is the Einstein tensor for $\fMet$. % and $\fVse$ is the bimetric stress--energy tensor coupled to $\fMet$.
+In the \threePlusOne decomposition, the spatial parts of the 4-dimensional metrics are $\gSp$, $\fSp$ and $\hSp$. We denote the determinant of a spatial metric with the symbol $\Delta$, and use the following notation taken from \PaperV and \PaperVI,
+\begin{alignat}{4}
+	\gdet	 		&\ ,\quad &\mbox{no accent} &:\quad &&\mbox{quantity refers to the $\gMet$-sector},& \nonumber \\
+	\fdet 			&\ ,\; &\mbox{tilde}&:&& \mbox{quantity refers to the $\fMet$-sector},& \nonumber \\
+	\hdet 		&\ ,\; &\mbox{hash}&: &&\mbox{quantity refers to the $\hMet$-sector},& \nonumber \\
+	\lSector{\boldsymbol{\Delta}} 		&\ ,\; &\mbox{boldface}&: &&\text{quantity refers to the Lorentz frame}.& \nonumber \\
+	\gdetBS 		&\ ,\quad &\mbox{overbar} &:\quad &&\mbox{quantity refers to the $\gMet$-sector in BSSN},& \nonumber \\
+	\fdetBS 			&\ ,\; &\mbox{wide hat}&:&& \mbox{quantity refers to the $\fMet$-sector in BSSN},& \nonumber \\
+	\hdetBS 		&\ ,\; &\mbox{circle}&: &&\mbox{quantity refers to the $\hMet$-sector in BSSN},& \nonumber \\
+	\lSector{\lBSSN{\boldsymbol{\Delta}}} 		&\ ,\; &\mbox{boldface, asterisk}&: &&\mbox{quantity refers to the Lorentz frame in BSSN}.& \nonumber 
+\end{alignat}
+
+The symbol $\coloneqq$ is used to define objects; the symbol $\equiv $ is used for identities. \emph{Italics} are used to emphasize and the quotation marks ``" are used to introduce or define a new word or a new expression.
+
+We use the notation \qm{(metrics)-geometric property} to mean that the an object has a geometric property with respect to the specified metric. For example, $\fMet$-spacelike means \qm{spacelike with respect to $\fMet$} and $(\gMet,\hMet)$-orthogonal means \qm{orthogonal with respect to $\gMet$ and $\hMet$.}
+
+In the plots, the color blue is associated with the metric $\gMet$, the color red with the metric $\fMet$ and the color green with their geometric mean metric $\hMet$.

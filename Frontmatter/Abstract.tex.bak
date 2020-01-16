@@ -1,0 +1,14 @@
+\chapter{Abstract}
+\label{ch:abstract}
+
+General relativity is the standard physical theory describing gravitational interactions. All astrophysical and cosmological observations are compatible with its predictions, provided that unknown matter and energy components are included. These are called dark matter and dark energy.
+
+In addition, general relativity describes the nonlinear self-interaction of a massless spin-2 field. In particle physics there are both massless and massive fields having spin 0, 1, 1/2. It is then well-justified to ask whether a mathematically consistent nonlinear theory describing a massive spin-2 field exists.
+
+The Hassan--Rosen bimetric relativity (BR) is a mathematically consistent theory describing the nonlinear interaction between a massless and a massive spin-2 field. These fields are mathematically described by two metrics, out of which only one can be directly coupled to us and determines the geometry that we can probe.
+
+Since it includes general relativity, BR is an extended theory of gravity and provides us with new astrophysical and cosmological solutions. These solutions, which may give hints about the nature of dark matter and dark energy, need to be tested against observations in order to support or falsify the theory. Doing that requires predictions for realistic physical systems. One such system is the spherically symmetric gravitational collapse of a dust cloud, and its study is the overarching motivation behind the thesis.
+
+Studying realistic physical system in BR requires the solving of the nonlinear equations of motion of the theory. This can be done in two ways: (i) looking for methods that simplify the equations in order to solve them exactly, and (ii) solving the equations numerically.
+
+The studies reviewed in the thesis provide results for both the alternatives. In both cases, they are inspired by general relativity. In the first case, the results regard spacetime symmetries (e.g., spherical symmetry) and how they affect particular solutions in BR, especially those describing gravitational collapse. In the second case, inspired by the astonishing success of numerical relativity, the results initiate the field of numerical bimetric relativity. The numerical simulations provide us with the first ideas about how gravitational collapse works in BR.

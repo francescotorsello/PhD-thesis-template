@@ -1,0 +1,14 @@
+\chapter{Svensk sammanfattning}
+\label{ch:sam}
+
+Den allmänna relativitetsteorin är den fysikaliska standardteorin som beskriver gravitation. Alla astrofysikaliska och kosmologiska observationer överensstämmer med teorins förutsägelser, förutsatt att okänd komponenter av materia och energi ingår. De kallas för mörk materia och mörk energi.
+
+Dessutom beskriver den allmänna relativitetsteorin den icke-linjära självinteraktionen av ett masslöst spin-2 fält. Inom partikelfysik finns det både masslösa och massiva fält med spinn 0, 1, 1/2. I detta scenario är det alltså väl motiverat att fråga om det finns en matematisk konsistent och icke-linjär teori som kan beskriva ett massivt spin-2 fält.
+
+Hassan--Rosens bimetriska relativitetsteori (BR) är en matematisk konsistent teori som beskriver den icke-linjära interaktionen mellan ett masslöst och ett massivt spin-2 fält. Båda dessa fält beskrivs matematiskt av två metriker. Endast en av dem kan kopplas direkt till oss och den bestämmer vilken geometri som vi kan undersöka.
+
+Eftersom BR inkluderar den allmänna relativitetsteorin är den en utvidgad teori om gravitation och den ger oss nya astrofysikaliska och kosmologiska lösningar. Dessa lösningar, som kan ge oss ledtråd om ursprung av mörk materia och mörk energi, måste testas med observationer för att stödja eller förfalska teorin. För att göra detta krävs förutsägelser för realistiska fysiska system. Ett sådant system är en sfäriskt symmetrisk gravitationskollaps av ett dammoln. Studien av detta system är den övergripande motivationen bakom avhandlingen.
+
+Att studera realistiska fysiska system i BR kräver lösningen av teorins icke-linjära rörelseekvationer. Detta kan göras på två sätt: (i) genom att leta efter metoder som förenklar ekvationerna för att lösa dem exakt och (ii) att lösa ekvationerna numeriskt.
+
+Studierna som är granskade i avhandlingen ger resultat för båda alternativen. I bägge fallen är de inspirerade av allmänna relativitet. I det första fallet rör resultaten rymdtidssymmetrier (till exempel sfärisk symmetri) och hur de påverkar specifika lösningar i BR, särskilt de som beskriver gravitationskollaps. I det andra fallet, som är inspirerat av den numeriska relativitetens fantastiska framgång, inleder resultaten fältet för numerisk bimetrisk relativitet. De numeriska simuleringarna ger oss de första idéerna om hur gravitationskollaps fungerar i BR.
